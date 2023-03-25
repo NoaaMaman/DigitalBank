@@ -24,11 +24,20 @@ namespace AuthenticationAndAuthorization.Pages.Account
                 //Creating the security context
                 var claims = new List<Claim> {
                     new Claim(ClaimTypes.Name, "admin"),
-                    new Claim(ClaimTypes.Email, "admin@mywebsite.com")
+                    new Claim(ClaimTypes.Email, "admin@mywebsite.com"),
+                    new Claim("Admin","true"),
+                    new Claim("Manager","true"),
+                    new Claim("EmploymentDate","2022-05-01")
                 };
                 var identity = new ClaimsIdentity(claims,"MyCookieAuth");
                 ClaimsPrincipal claimsProncipal = new ClaimsPrincipal(identity);
-                await HttpContext.SignInAsync("MyCookieAuth",claimsProncipal);
+
+                var authProperties = new AuthenticationProperties
+                {
+                        IsPersistent= Credential.RememberMe
+                };
+                
+                await HttpContext.SignInAsync("MyCookieAuth",claimsProncipal, authProperties);
                 return RedirectToPage("/Index");
 
             }
@@ -44,5 +53,8 @@ namespace AuthenticationAndAuthorization.Pages.Account
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+         
+        [Display(Name = "Remember Me")]
+        public bool RememberMe{ get; set; }
     }
 }

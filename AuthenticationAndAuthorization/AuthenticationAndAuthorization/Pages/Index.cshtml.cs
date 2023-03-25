@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Primitives;
 
 namespace AuthenticationAndAuthorization.Pages
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         
@@ -19,9 +21,6 @@ namespace AuthenticationAndAuthorization.Pages
 
 
         }
-        public void OnPost()
-        {
-
-        }
+        
     }
 }

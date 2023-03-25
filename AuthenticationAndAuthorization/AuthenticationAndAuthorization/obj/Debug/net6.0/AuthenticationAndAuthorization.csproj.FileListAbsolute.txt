@@ -1,5 +1,3 @@
-C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\appsettings.json
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\AuthenticationAndAuthorization.staticwebassets.runtime.json
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\AuthenticationAndAuthorization.exe
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\AuthenticationAndAuthorization.deps.json
@@ -29,3 +27,5 @@ C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\Authentica
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\obj\Debug\net6.0\AuthenticationAndAuthorization.pdb
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\obj\Debug\net6.0\AuthenticationAndAuthorization.genruntimeconfig.cache
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\obj\Debug\net6.0\ref\AuthenticationAndAuthorization.dll
+C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\Pages\appsettings.Development.json
+C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\Pages\appsettings.json
