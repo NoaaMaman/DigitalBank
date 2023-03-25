@@ -7,20 +7,21 @@ import TransactionsList from './Transactions/TransactionsList';
 import Button from './Utils/Button';
 import Menu from './Menu';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import routes from './rout-config';
+//import configureValidations from './Validations';
 
-
+//configureValidations();
 function App() {
   return (
     <BrowserRouter>
       <Menu />
       <div className="container">
       <Switch>
-        {routes.map(route =>
-          <Route key={route.path} path={route.path}>
-            <route.component />
-          </Route>)}
+        {routes.map((r) => (
+          <Route key={r.path} path={r.path} exact={r.exact} >
+              <r.component />
+          </Route>
+        ))}
       </Switch>
       </div>
     </BrowserRouter>

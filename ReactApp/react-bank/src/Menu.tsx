@@ -13,7 +13,7 @@ export default function Menu(){
                            </NavLink>
                         </li>
                         <li>
-                            <NavLink className="nav-link" to="/makeTransaction/create">
+                            <NavLink className="nav-link" to="/makeTransaction">
                                 Create Transaction
                            </NavLink>
                         </li>
