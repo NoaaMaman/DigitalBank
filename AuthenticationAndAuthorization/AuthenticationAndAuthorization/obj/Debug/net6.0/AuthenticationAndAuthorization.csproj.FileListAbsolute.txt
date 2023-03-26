@@ -29,3 +29,5 @@ C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\Authentica
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\obj\Debug\net6.0\ref\AuthenticationAndAuthorization.dll
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\Pages\appsettings.Development.json
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\Pages\appsettings.json
+C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\obj\Debug\net6.0\AuthenticationAndAuthorization.csproj.CopyComplete
