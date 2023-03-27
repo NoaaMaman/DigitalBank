@@ -21,7 +21,9 @@ export default function createTransaction(){
              validationSchema={Yup.object({
                 name: Yup.string().required('This field is required').firstLetterUppercase()
              })}
+                
             >
+                
                 <Form>
                     <TextField field="name" displayName="Name"/>
                     <Button type="submit">Make Transaction!</Button>

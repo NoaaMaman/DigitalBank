@@ -8,10 +8,18 @@ import Button from './Utils/Button';
 import Menu from './Menu';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import routes from './rout-config';
+import axios from 'axios';
+import { urlWeather } from './endpoint';
 //import configureValidations from './Validations';
 
 //configureValidations();
 function App() {
+  useEffect(() => {
+    axios.get('https://localhost:7016/WeatherForecast')
+      .then(response => {
+        console.log(response.data);
+      });
+  }, []);
   return (
     <BrowserRouter>
       <Menu />

@@ -1,0 +1,27 @@
+﻿@page
+@model AuthenticationAndAuthorization.Pages.ConsultingManager
+@{
+}
+<div>
+    <h1>Consultant Manager</h1>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Transaction Unique Reference</td>
+                <td>Transaction Amount</td>
+                <td>TrnsactionStatus</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.WeatherForecastItems)
+            {
+                    <tr>
+                    <td>@item.TemperatureF</td>
+                    <td>@item.TemperatureC</td>
+                    <td>@item.Summary</td>
+                    </tr>
+            }
+        </tbody>
+    </table>   
+</div>

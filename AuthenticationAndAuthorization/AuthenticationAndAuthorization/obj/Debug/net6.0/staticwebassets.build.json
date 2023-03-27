@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "vyZ5I735byt3LtJue1NSzafDlcfo8u7q9FReT2RKAR4=",
+  "Hash": "gs+IBVIJ4/SkBuTqkakP6xibNKmcr+o2P0hnson/RG0=",
   "Source": "AuthenticationAndAuthorization",
   "BasePath": "_content/AuthenticationAndAuthorization",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\AuthenticationAndAuthorization\\OriginalBankAPI\\OriginalBankAPI.csproj",
+      "Version": 2,
+      "Source": "OriginalBankAPI",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "AuthenticationAndAuthorization\\wwwroot",
