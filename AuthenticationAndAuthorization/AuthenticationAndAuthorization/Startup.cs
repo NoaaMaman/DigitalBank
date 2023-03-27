@@ -1,6 +1,10 @@
 ﻿using AuthenticationAndAuthorization.Authorization;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace AuthenticationAndAuthorization
 {
@@ -19,40 +23,46 @@ namespace AuthenticationAndAuthorization
             services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", options =>
             {
                 options.Cookie.Name = "MyCookieAuth";
-                options.LoginPath= "/Account/Login";//Explicitly declare the login page
-                options.AccessDeniedPath= "/Account/AccessDenied";
-                options.ExpireTimeSpan= TimeSpan.FromMinutes(2);
+                options.LoginPath = "/Account/Login"; // Explicitly declare the login page
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(2);
             });
+
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdminOnly",
                     policy => policy.RequireClaim("Admin"));
 
-                options.AddPolicy("MustBelongConsultingBanker"
-                    , policy => policy.RequireClaim("Employee", "ConsultingBankers"));
-                options.AddPolicy("ConsultantManagerOnly", policy => policy
-                    //.RequireClaim("Department", "ConsultingBankers")
-                    .RequireClaim("Manager")
-                    .Requirements.Add(new ConsultantManagerProbationRequiremet(3)));    
+                options.AddPolicy("MustBelongConsultingBanker",
+                    policy => policy.RequireClaim("Employee", "ConsultingBankers"));
+
+                options.AddPolicy("ConsultantManagerOnly", policy =>
+                {
+                    policy.RequireClaim("Manager");
+                    policy.Requirements.Add(new ConsultantManagerProbationRequiremet(3));
+                });
             });
+
             services.AddSingleton<IAuthorizationHandler, ConsultantManagerProbationRequiremetHandler>();
-            services.AddRazorPages();
-<<<<<<< HEAD
+
             services.AddHttpClient("OriginalBankAPI", client =>
             {
                 client.BaseAddress = new Uri("https://localhost:7016");
-=======
+            });
+
             services.AddHttpClient("OurWebAPI", client =>
             {
                 client.BaseAddress = new Uri("https://localhost:7193/");
->>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             });
+
             services.AddSession(options =>
             {
                 options.Cookie.HttpOnly = true;
                 options.IdleTimeout = TimeSpan.FromHours(8);
                 options.Cookie.IsEssential = true;
             });
+
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,7 +75,6 @@ namespace AuthenticationAndAuthorization
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 

@@ -1,41 +1,32 @@
 ﻿@page
-@model AuthenticationAndAuthorization.Pages.ConsultingManager
+@model AuthenticationAndAuthorization.Pages.ConsultingManagerModel
 @{
 }
 <div>
-    <h1>Consultant Manager</h1>
+    <h1>Consulting Manager</h1>
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-<<<<<<< HEAD
-                <td>ID</td>
-                <td>Transaction Unique Reference</td>
-                <td>Transaction Amount</td>
-                <td>TrnsactionStatus</td>
-=======
-            <td>Date</td>
-                <td>Temp C</td>
-                <td>Temp F</td>
-                <td>Summary</td>
->>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
+                <th>ID</th>
+                <th>Transaction Unique Reference</th>
+                <th>Transaction Amount</th>
+                <th>Transaction Status</th>
+                <th>Date</th>
+                <th>Temp C</th>
+                <th>Temp F</th>
+                <th>Summary</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.WeatherForecastItems)
             {
-                    <tr>
-<<<<<<< HEAD
-                    <td>@item.TemperatureF</td>
+                <tr>
+                    <td>@item.Date</td>
                     <td>@item.TemperatureC</td>
+                    <td>@item.TemperatureF</td>
                     <td>@item.Summary</td>
-=======
-                        <td>@item.Date</td>
-                        <td>@item.TemperatureC</td>
-                        <td>@item.TemperatureF</td>
-                        <td>@item.Summary</td>
->>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
-                    </tr>
+                </tr>
             }
         </tbody>
-    </table>   
+    </table>
 </div>
