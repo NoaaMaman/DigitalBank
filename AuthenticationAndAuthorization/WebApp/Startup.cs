@@ -34,6 +34,7 @@ namespace WebApp
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 8;
+<<<<<<< HEAD
                 options.Password.RequireLowercase = true;
                 options.Password.RequireUppercase = true;
                 options.Lockout.MaxFailedAccessAttempts = 5;
@@ -44,6 +45,16 @@ namespace WebApp
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+=======
+                options.Password.RequireLowercase= true;
+                options.Password.RequireUppercase= true;
+                options.Lockout.MaxFailedAccessAttempts = 5;
+
+                options.Lockout.DefaultLockoutTimeSpan= TimeSpan.FromMinutes(15);
+                options.User.RequireUniqueEmail= true;
+            })
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Account/Login";//Explicitly declare the login page

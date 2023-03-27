@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+=======
+﻿using Microsoft.OpenApi.Models;
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
 
 namespace BankApI
 {
@@ -16,14 +20,20 @@ namespace BankApI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+<<<<<<< HEAD
            
 
             services.AddControllers();
 
+=======
+
+            services.AddControllers();
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BankAPI", Version = "v1" });
             });
+<<<<<<< HEAD
 
             services.AddCors(options =>
             {
@@ -40,6 +50,10 @@ namespace BankApI
         }
 
 
+=======
+        }
+
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -54,8 +68,11 @@ namespace BankApI
 
             app.UseRouting();
 
+<<<<<<< HEAD
            
 
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             app.UseAuthentication();
             app.UseAuthorization();
 

@@ -7,19 +7,33 @@
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
+<<<<<<< HEAD
                 <td>ID</td>
                 <td>Transaction Unique Reference</td>
                 <td>Transaction Amount</td>
                 <td>TrnsactionStatus</td>
+=======
+            <td>Date</td>
+                <td>Temp C</td>
+                <td>Temp F</td>
+                <td>Summary</td>
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.WeatherForecastItems)
             {
                     <tr>
+<<<<<<< HEAD
                     <td>@item.TemperatureF</td>
                     <td>@item.TemperatureC</td>
                     <td>@item.Summary</td>
+=======
+                        <td>@item.Date</td>
+                        <td>@item.TemperatureC</td>
+                        <td>@item.TemperatureF</td>
+                        <td>@item.Summary</td>
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
                     </tr>
             }
         </tbody>

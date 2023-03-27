@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "B0R/DPfvX4gPnIYP0P51TfY0jkHvKaqLsK2k3uh+Hg0DJS3m1armrL2B6O4EiGgqw7OCUBu+cgg7E9hqXOTghg==",
+=======
+  "dgSpecHash": "kZ55Tw9yNqtbbvnpzeU9/PhajtH9CD4eCEhp1LIvdtPxXJnjZnbPGafihCFsr8NTnrYf4ZTAFGpxghp5TnyZ7A==",
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\AuthenticationAndAuthorization\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [

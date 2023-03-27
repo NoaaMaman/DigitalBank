@@ -20,7 +20,11 @@ namespace AuthenticationAndAuthorization.Pages
 
         public async Task OnGetAsync()
         {
+<<<<<<< HEAD
             var httpClient = httpClientFactory.CreateClient("OriginalWebAPI");
+=======
+            var httpClient = httpClientFactory.CreateClient("OurWebAPI");
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             WeatherForecastItems = await httpClient.GetFromJsonAsync<List<weatherForecastDTO>>("WeatherForecast");
         }
     }

@@ -37,9 +37,15 @@ namespace AuthenticationAndAuthorization
             });
             services.AddSingleton<IAuthorizationHandler, ConsultantManagerProbationRequiremetHandler>();
             services.AddRazorPages();
+<<<<<<< HEAD
             services.AddHttpClient("OriginalBankAPI", client =>
             {
                 client.BaseAddress = new Uri("https://localhost:7016");
+=======
+            services.AddHttpClient("OurWebAPI", client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7193/");
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             });
             services.AddSession(options =>
             {

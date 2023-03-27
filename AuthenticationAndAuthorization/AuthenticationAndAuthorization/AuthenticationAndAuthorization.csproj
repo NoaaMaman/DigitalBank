@@ -10,8 +10,11 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
+<<<<<<< HEAD
   <ItemGroup>
     <ProjectReference Include="..\OriginalBankAPI\OriginalBankAPI.csproj" />
   </ItemGroup>
 
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
 </Project>

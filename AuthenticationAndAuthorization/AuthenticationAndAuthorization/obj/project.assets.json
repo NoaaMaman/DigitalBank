@@ -2,6 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
+<<<<<<< HEAD
       "Azure.Core/1.25.0": {
         "type": "package",
         "dependencies": {
@@ -46,6 +47,8 @@
           }
         }
       },
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
       "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -98,6 +101,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "type": "package",
         "compile": {
@@ -361,6 +365,8 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
       "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -377,6 +383,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.Extensions.Logging/8.0.0-preview.2.23128.3": {
         "type": "package",
         "dependencies": {
@@ -387,10 +394,21 @@
         },
         "compile": {
           "lib/net6.0/Microsoft.Extensions.Logging.dll": {
+=======
+      "Microsoft.Extensions.Primitives/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/Microsoft.Extensions.Logging.dll": {
             "related": ".xml"
           }
@@ -582,6 +600,9 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
+=======
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             "related": ".xml"
           }
         }
@@ -603,6 +624,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -669,6 +691,8 @@
           }
         }
       },
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
       "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
@@ -682,6 +706,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Swashbuckle.AspNetCore/6.2.3": {
         "type": "package",
         "dependencies": {
@@ -745,6 +770,8 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -754,6 +781,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+<<<<<<< HEAD
       "System.Configuration.ConfigurationManager/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -853,6 +881,9 @@
         }
       },
       "System.Memory/4.5.4": {
+=======
+      "System.Memory/4.5.1": {
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -861,6 +892,7 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+<<<<<<< HEAD
       "System.Memory.Data/1.0.2": {
         "type": "package",
         "dependencies": {
@@ -869,15 +901,26 @@
         },
         "compile": {
           "lib/netstandard2.0/System.Memory.Data.dll": {
+=======
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/netstandard2.0/System.Memory.Data.dll": {
+=======
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             "related": ".xml"
           }
         }
       },
+<<<<<<< HEAD
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -906,10 +949,17 @@
         },
         "compile": {
           "lib/net6.0/_._": {
+=======
+      "System.Text.Encodings.Web/4.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/System.Runtime.Caching.dll": {
             "related": ".xml"
           }
@@ -1173,10 +1223,17 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+=======
+          "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        }
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
       }
     }
   },
   "libraries": {
+<<<<<<< HEAD
     "Azure.Core/1.25.0": {
       "sha512": "X8Dd4sAggS84KScWIjEbFAdt2U1KDolQopTPoHVubG2y3CM54f9l6asVrP5Uy384NWXjsspPYaJgz5xHc+KvTA==",
       "type": "package",
@@ -1215,6 +1272,8 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
     "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
       "sha512": "Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
       "type": "package",
@@ -1254,6 +1313,7 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "sha512": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
       "type": "package",
@@ -1672,6 +1732,8 @@
         "useSharedDesignerContext.txt"
       ]
     },
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
     "Microsoft.Extensions.FileProviders.Abstractions/2.2.0": {
       "sha512": "EcnaSsPTqx2MGnHrmWOD0ugbuuqVT8iICqSqPzi45V5/MA1LjUNb0kwgcxBGqizV1R+WeBK7/Gw25Jzkyk9bIw==",
       "type": "package",
@@ -1685,6 +1747,7 @@
         "microsoft.extensions.fileproviders.abstractions.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.Extensions.Logging/8.0.0-preview.2.23128.3": {
       "sha512": "u+6+0XKdO1VlnNYKzaIklyfgCSsBs21yZfEVKFpgJ0Ppx4BULIyJPqaEzCMaK0ajDw/k7xe8vafMUjmjX6h2UA==",
       "type": "package",
@@ -2025,6 +2088,19 @@
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
         "microsoft.identitymodel.tokens.6.24.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
+=======
+    "Microsoft.Extensions.Primitives/2.2.0": {
+      "sha512": "azyQtqbm4fSaDzZHD/J+V6oWMFaf2tWP4WEGIYePLCMw3+b2RQdj9ybgbQyjCshcitQKQ4lEDOZjmSlTTrHxUg==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec"
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
       ]
     },
     "Microsoft.Net.Http.Headers/2.2.0": {
@@ -2040,6 +2116,7 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -2134,6 +2211,8 @@
         "useSharedDesignerContext.txt"
       ]
     },
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
     "Newtonsoft.Json/13.0.2": {
       "sha512": "R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
       "type": "package",
@@ -2164,6 +2243,7 @@
         "packageIcon.png"
       ]
     },
+<<<<<<< HEAD
     "Swashbuckle.AspNetCore/6.2.3": {
       "sha512": "cnzQDn0Le+hInsw2SYwlOhOCPXpYi/szcvnyqZJ12v+QyrLBwAmWXBg6RIyHB18s/mLeywC+Rg2O9ndz0IUNYQ==",
       "type": "package",
@@ -2245,6 +2325,8 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
     "System.Buffers/4.5.0": {
       "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "type": "package",
@@ -2274,6 +2356,7 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Configuration.ConfigurationManager/6.0.1": {
       "sha512": "jXw9MlUu/kRfEU0WyTptAVueupqIeE3/rl0EZDMlf8pcvJnitQ8HeVEp69rZdaStXwTV72boi/Bhw8lOeO+U2w==",
       "type": "package",
@@ -2408,25 +2491,43 @@
       "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
       "type": "package",
       "path": "system.memory/4.5.4",
+=======
+    "System.Memory/4.5.1": {
+      "sha512": "sDJYJpGtTgx+23Ayu5euxG5mAXWdkDb4+b0rD0Cab0M1oQS9H0HXGPriKcqpXuiJDTV7fTp/d+fMDJmnr6sNvA==",
+      "type": "package",
+      "path": "system.memory/4.5.1",
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+<<<<<<< HEAD
         "lib/net461/System.Memory.dll",
         "lib/net461/System.Memory.xml",
+=======
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.1/System.Memory.dll",
         "lib/netstandard1.1/System.Memory.xml",
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
+<<<<<<< HEAD
         "system.memory.4.5.4.nupkg.sha512",
+=======
+        "ref/netstandard1.1/System.Memory.dll",
+        "ref/netstandard1.1/System.Memory.xml",
+        "ref/netstandard2.0/System.Memory.dll",
+        "ref/netstandard2.0/System.Memory.xml",
+        "system.memory.4.5.1.nupkg.sha512",
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Memory.Data/1.0.2": {
       "sha512": "JGkzeqgBsiZwKJZ1IxPNsDFZDhUvuEdX8L8BDC8N3KOj+6zMcNU28CNN59TpZE/VJYy9cP+5M+sbxtWJx3/xtw==",
       "type": "package",
@@ -2449,11 +2550,18 @@
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
       "path": "system.numerics.vectors/4.5.0",
+=======
+    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "sha512": "Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+<<<<<<< HEAD
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Numerics.Vectors.dll",
@@ -2752,10 +2860,25 @@
         "runtimes/win/lib/uap10.0.16299/_._",
         "system.security.cryptography.cng.5.0.0.nupkg.sha512",
         "system.security.cryptography.cng.nuspec",
+=======
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Security.Cryptography.ProtectedData/6.0.0": {
       "sha512": "rp1gMNEZpvx9vP0JW0oHLxlf8oSiQgtno77Y4PLUBjSiDYoD77Y8uXHr1Ea5XG4/pIKhqAdxZ8v8OTUtqo9PeQ==",
       "type": "package",
@@ -3095,13 +3218,37 @@
       "type": "project",
       "path": "../OriginalBankAPI/OriginalBankAPI.csproj",
       "msbuildProject": "../OriginalBankAPI/OriginalBankAPI.csproj"
+=======
+    "System.Text.Encodings.Web/4.5.0": {
+      "sha512": "Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
+      "type": "package",
+      "path": "system.text.encodings.web/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.4.5.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.AspNetCore.Http.Extensions >= 2.2.0",
+<<<<<<< HEAD
       "Newtonsoft.Json >= 13.0.2",
       "OriginalBankAPI >= 1.0.0"
+=======
+      "Newtonsoft.Json >= 13.0.2"
+>>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
     ]
   },
   "packageFolders": {
