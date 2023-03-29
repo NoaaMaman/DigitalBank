@@ -16,18 +16,18 @@ namespace InitialAlogarithmForBankingSystem
             //Use customer attributes to determine the best account offer
             if (customer.Age < 30 && customer.NumDependents == 0)
             {
-                _graph.AddEdge("Start", "Youth Savings");
+                _graph.AddEdge("Start", "Youth Savings");//First Account Type
                 return new Account("Youth Savings", 0.02, 12, 0);
 
             }
             else if (customer.Income < 50000 && customer.NumDependents == 0)
             {
-                _graph.AddEdge("Start", "Basic Savings");
+                _graph.AddEdge("Start", "Basic Savings");//Second Account Type
                 return new Account("Basic Savings", 0.01, 12, 0);
             }
             else if (customer.CreditScore < 600 && customer.NumDependents == 0)
             {
-                _graph.AddEdge("Start", "Basic Savings");
+                _graph.AddEdge("Start", "Basic Savings");//Third Account Type
                 return new Account("Credit Builder Savings", 0.03, 12, 0);
             }
             else if (customer.IsMarried &&
@@ -40,7 +40,7 @@ namespace InitialAlogarithmForBankingSystem
             }
             else
             {
-                return new Account("High-Yield Savings", 0.05, 12, 0);
+                return new Account("High-Yield Savings", 0.05, 12, 0);//Fourth Acount Type
             }
         }
     }
