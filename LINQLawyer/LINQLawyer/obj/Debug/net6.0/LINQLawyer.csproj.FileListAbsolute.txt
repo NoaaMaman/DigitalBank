@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\bin\Debug\net6.0\LINQLawyer.exe
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\bin\Debug\net6.0\LINQLawyer.deps.json
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\bin\Debug\net6.0\LINQLawyer.runtimeconfig.json
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\bin\Debug\net6.0\LINQLawyer.dll
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\bin\Debug\net6.0\LINQLawyer.pdb
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\LINQLawyer.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\LINQLawyer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\LINQLawyer.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\LINQLawyer.AssemblyInfo.cs
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\LINQLawyer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\LINQLawyer.dll
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\refint\LINQLawyer.dll
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\LINQLawyer.pdb
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\LINQLawyer.genruntimeconfig.cache
+C:\Users\Admin\Desktop\DigitalBankproj\LINQLawyer\LINQLawyer\obj\Debug\net6.0\ref\LINQLawyer.dll

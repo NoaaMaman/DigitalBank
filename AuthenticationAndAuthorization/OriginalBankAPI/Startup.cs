@@ -22,7 +22,7 @@ namespace BankApI
 
             services.AddControllers();
 
-            services.AddSingleton<IRepository, InMemoryRepository>();
+            services.AddSingleton<ITransactionRepository, TransactionRepository>();
 
             services.AddSwaggerGen(c =>
             {

@@ -7,8 +7,8 @@ namespace OriginalBankAPI.Controllers
     [Route("api/[controller]")]
     public class TransactionController : ControllerBase
     {
-        private readonly IRepository repository;
-        public TransactionController(IRepository repository)
+        private readonly ITransactionRepository repository;
+        public TransactionController(ITransactionRepository repository)
         {
             
             this.repository = repository;

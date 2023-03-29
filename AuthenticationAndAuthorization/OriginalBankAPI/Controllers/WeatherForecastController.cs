@@ -14,9 +14,9 @@ namespace OriginalBankAPI.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly IRepository repository;
+        private readonly ITransactionRepository repository;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IRepository repository)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ITransactionRepository repository)
         {
             this.repository = repository;
             _logger = logger;
