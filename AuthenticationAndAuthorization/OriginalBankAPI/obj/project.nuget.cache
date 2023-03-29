@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QPkhS28c0Te+dgX9KtAW30vOxBUGPROGwzChILDFgAXc0gCLDUY4PskYfxGa5IIjzaH8Y92ZtzgE5a/NPawsPw==",
+  "dgSpecHash": "3mdFnXuOkJUbVlqnFoCR7maTW5hveOQ4LAjODpXYu8AbGXNXTUqXZNgPlPWCUAfzaPAo6+iNMnZd84WUR06JkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\AuthenticationAndAuthorization\\OriginalBankAPI\\OriginalBankAPI.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.0-preview.2.23128.3\\microsoft.entityframeworkcore.design.8.0.0-preview.2.23128.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.0-preview.2.23128.3\\microsoft.entityframeworkcore.relational.8.0.0-preview.2.23128.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.0-preview.2.23128.3\\microsoft.entityframeworkcore.sqlserver.8.0.0-preview.2.23128.3.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.0-preview.2.23128.3\\microsoft.entityframeworkcore.tools.8.0.0-preview.2.23128.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.15\\microsoft.entityframeworkcore.tools.6.0.15.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0-preview.2.23128.3\\microsoft.extensions.caching.abstractions.8.0.0-preview.2.23128.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0-preview.2.23128.3\\microsoft.extensions.caching.memory.8.0.0-preview.2.23128.3.nupkg.sha512",

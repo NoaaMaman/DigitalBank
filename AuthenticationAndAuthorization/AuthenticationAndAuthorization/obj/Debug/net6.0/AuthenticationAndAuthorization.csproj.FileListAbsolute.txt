@@ -93,3 +93,5 @@ C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\Authentica
 C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\OriginalBankAPI.pdb
 =======
 >>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
+C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Admin\Desktop\DigitalBankproj\AuthenticationAndAuthorization\AuthenticationAndAuthorization\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
