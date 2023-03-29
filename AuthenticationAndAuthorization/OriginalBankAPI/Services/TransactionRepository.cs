@@ -2,6 +2,9 @@
 using BankApI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Transactions;
 using Transaction = BankApI.Models.Transaction;
 
@@ -11,23 +14,23 @@ namespace OriginalBankAPI.Services
     {
         private List<Transaction> _transactions;
         private BankingDbContext DbContext { get; set; }
-        public TransactionRepository()
-        {
-            _transactions = new List<Transaction>()
-            {
-                new Transaction() {
-                    ID  = 1,
-                    TransactionAmount = 100,
-                    TrnsactionStatus = TransStatus.Success,
-                    TrnsactionSourceAccount = "me",
-                    TransactionDestinationAccount="yosi",
-                    TrnsactionParticulars="holiday gift",
-                    TransactionType = TransType.Transfer,
-                    TransactionDate = new DateTime(2023, 3, 27, 13, 30, 0, DateTimeKind.Local)
-                }
-            };
-        }
-        public TransactionRepository(BakningDbContext dbContext)
+        //public TransactionRepository()
+        //{
+        //    _transactions = new List<Transaction>()
+        //    {
+        //        new Transaction() {
+        //            ID  = 1,
+        //            TransactionAmount = 100,
+        //            TrnsactionStatus = TransStatus.Success,
+        //            TrnsactionSourceAccount = "me",
+        //            TransactionDestinationAccount="yosi",
+        //            TrnsactionParticulars="holiday gift",
+        //            TransactionType = TransType.Transfer,
+        //            TransactionDate = new DateTime(2023, 3, 27, 13, 30, 0, DateTimeKind.Local)
+        //        }
+        //    };
+        //}
+        public TransactionRepository(BankingDbContext dbContext)
         {
             DbContext = dbContext;
         }
@@ -65,6 +68,11 @@ namespace OriginalBankAPI.Services
             DbContext.Transactions.Attach(transaction);
             DbContext.Entry(transaction).State = EntityState.Modified;
             await DbContext.SaveChangesAsync();
+        }
+
+        Task<int> ITransactionRepository.CraeteTrasactionAsync(Transaction transaction)
+        {
+            throw new NotImplementedException();
         }
     }
 }

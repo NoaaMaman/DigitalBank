@@ -1,5 +1,7 @@
 ﻿using BankApI.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using OriginalBankAPI.Services;
 
@@ -18,7 +20,7 @@ namespace BankApI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BankingDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("BankingDbConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
 

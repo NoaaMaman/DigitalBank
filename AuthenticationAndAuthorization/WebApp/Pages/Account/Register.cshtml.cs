@@ -2,11 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-<<<<<<< HEAD
+
 using System.Net;
 using System.Net.Mail;
-=======
->>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
+
 
 namespace WebApp.Pages.Account
 {
@@ -26,23 +25,23 @@ namespace WebApp.Pages.Account
         }
         public async Task<IActionResult> OnPostAsync() 
         {
-<<<<<<< HEAD
+
             if (!ModelState.IsValid) return Page();
 
             // Validating Email address (Optional)
 
             // Create the user 
-=======
+
             if(!ModelState.IsValid) return Page();
             //Validating Email Adress
             //Create the User
->>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
+
             var user = new IdentityUser
             {
                 Email = registerViewModel.Email,
                 UserName = registerViewModel.Email
             };
-<<<<<<< HEAD
+
 
             var result = await this.userManager.CreateAsync(user, registerViewModel.Password);
             if (result.Succeeded)
@@ -77,7 +76,7 @@ namespace WebApp.Pages.Account
                 return Page();
             }
 
-=======
+
             var result =await this.userManager.CreateAsync(user);
             if(result.Succeeded)
             {
@@ -95,26 +94,25 @@ namespace WebApp.Pages.Account
 
 
 
->>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
         }
     }
     public class RegisterViewModel
     {
         [Required]
         [EmailAddress(ErrorMessage ="Invalid Email Adress")]
-<<<<<<< HEAD
+
         public string Email{ get; set; }
 
         [Required]
         [DataType(dataType:DataType.Password)]
         public string Password{ get; set; }
-=======
+
         public string? Email{ get; set; }
 
         [Required]
         [DataType(dataType:DataType.Password)]
         public string? Password{ get; set; }
->>>>>>> 6b020f7139a3606cc80faecac92a2003862d6710
+
     }
 
 
