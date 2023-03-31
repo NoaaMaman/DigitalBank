@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\bin\Debug\net6.0\Bankproject.Infrastructure.deps.json
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\bin\Debug\net6.0\Bankproject.Infrastructure.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\bin\Debug\net6.0\Bankproject.Infrastructure.pdb
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\bin\Debug\net6.0\Bankproject.Common.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\bin\Debug\net6.0\Bankproject.Common.pdb
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\Bankproject.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\Bankproject.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\Bankproject.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\Bankproject.Infrastructure.AssemblyInfo.cs
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\Bankproject.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\Bankproject.Infrastructure.csproj.CopyComplete
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\Bankproject.Infrastructure.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\refint\Bankproject.Infrastructure.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\Bankproject.Infrastructure.pdb
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Infrastructure\obj\Debug\net6.0\ref\Bankproject.Infrastructure.dll

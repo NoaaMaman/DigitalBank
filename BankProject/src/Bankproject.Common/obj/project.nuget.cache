@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9xwLWYhmTYE/PS/9KGqlwUuSV4BEVHxzoN6ujKCikBj0l2Uw0kInTd/A9C39kgyaME+UrNW02eUNF1uNweqGmQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankProject\\src\\Bankproject.Common\\Bankproject.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

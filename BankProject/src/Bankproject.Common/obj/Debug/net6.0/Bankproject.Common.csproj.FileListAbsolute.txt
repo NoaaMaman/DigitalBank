@@ -1,0 +1,12 @@
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\bin\Debug\net6.0\Bankproject.Common.deps.json
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\bin\Debug\net6.0\Bankproject.Common.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\bin\Debug\net6.0\Bankproject.Common.pdb
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\obj\Debug\net6.0\Bankproject.Common.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\obj\Debug\net6.0\Bankproject.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\obj\Debug\net6.0\Bankproject.Common.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\obj\Debug\net6.0\Bankproject.Common.AssemblyInfo.cs
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\obj\Debug\net6.0\Bankproject.Common.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\obj\Debug\net6.0\Bankproject.Common.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\obj\Debug\net6.0\refint\Bankproject.Common.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\obj\Debug\net6.0\Bankproject.Common.pdb
+C:\Users\Admin\Desktop\DigitalBankproj\BankProject\src\Bankproject.Common\obj\Debug\net6.0\ref\Bankproject.Common.dll
