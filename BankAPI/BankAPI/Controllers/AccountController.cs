@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BankAPI.Models;
+using BankAPI.Models.DTOS.AccountDTO;
 using BankAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;

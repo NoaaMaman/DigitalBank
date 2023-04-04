@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using BankAPI.Models;
+using BankAPI.Models.DTOS.AccountDTO;
+using BankAPI.Models.DTOS.TransactionDTO;
 
 namespace BankAPI.Profiles
 {

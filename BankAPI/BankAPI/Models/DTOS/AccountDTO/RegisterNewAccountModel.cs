@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace BankAPI.Models
+namespace BankAPI.Models.DTOS.AccountDTO
 {
     public class RegisterNewAccountModel
     {
-       // [Key]
-       // public int AccountId { get; set; }
+        // [Key]
+        // public int AccountId { get; set; }
 
         public string FirstName { get; set; } = default!;
 
@@ -24,7 +24,7 @@ namespace BankAPI.Models
 
         //public string AccountNumberGenerated { get; set; } = default!;
 
-       // [Column("PinHash")]
+        // [Column("PinHash")]
         //public byte[] PinHash { get; set; } = default!;
 
         //public byte[] PinSalt { get; set; } = default!;
@@ -34,11 +34,11 @@ namespace BankAPI.Models
         public DateTime DateLastUpdated { get; set; } = default!;
 
         [Required]
-        [RegularExpression(@"^[0-9]{4}$",ErrorMessage ="Pin must not be more than 4 digits")]
+        [RegularExpression(@"^[0-9]{4}$", ErrorMessage = "Pin must not be more than 4 digits")]
         public string Pin { get; set; } = default!;
 
         [Required]
-        [Compare("Pin",ErrorMessage ="Pins do not match")]
+        [Compare("Pin", ErrorMessage = "Pins do not match")]
         public string ConfirmPin { get; set; }
     }
 }

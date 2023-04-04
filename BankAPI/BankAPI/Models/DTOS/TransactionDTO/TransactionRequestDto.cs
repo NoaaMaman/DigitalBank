@@ -1,4 +1,4 @@
-﻿namespace BankAPI.Models
+﻿namespace BankAPI.Models.DTOS.TransactionDTO
 {
     public class TransactionRequestDto
     {

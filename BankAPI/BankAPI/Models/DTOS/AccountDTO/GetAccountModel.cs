@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace BankAPI.Models
+namespace BankAPI.Models.DTOS.AccountDTO
 {
     public class GetAccountModel
     {
@@ -25,7 +25,7 @@ namespace BankAPI.Models
 
         public string AccountNumberGenerated { get; set; } = default!;
 
-        
+
 
         public DateTime DateCreated { get; set; } = default!;
 

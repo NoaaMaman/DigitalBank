@@ -1,7 +1,7 @@
 ﻿using Microsoft.Identity.Client;
 using System.ComponentModel.DataAnnotations;
 
-namespace BankAPI.Models
+namespace BankAPI.Models.DTOS.AccountDTO
 {
     public class AuthenticateModel
     {

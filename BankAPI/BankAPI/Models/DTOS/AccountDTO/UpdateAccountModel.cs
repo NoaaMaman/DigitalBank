@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BankAPI.Models
+namespace BankAPI.Models.DTOS.AccountDTO
 {
     public class UpdateAccountModel
     {
         [Key]
         public int Id { get; set; }
 
-        
+
 
         public string PhoneNumber { get; set; } = default!;
 
