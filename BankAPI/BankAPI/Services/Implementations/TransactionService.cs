@@ -37,6 +37,7 @@ namespace BankAPI.Services.Implementations
             return response;
 
         }
+        
 
         Response ITransactionService.FindTransactionByDate(DateTime date)
         {
@@ -59,6 +60,7 @@ namespace BankAPI.Services.Implementations
             //First check if the user  - account owner is valid
             //we'll need authenticate in UserService, so let's inject IUserService Here
             var authUser = _accountService.Authenticate(AccountNumber, TransactionPin);
+
             if (authUser == null) throw new ApplicationException("Invalid Credentials");
 
             try
@@ -71,19 +73,13 @@ namespace BankAPI.Services.Implementations
                 sourceAccount.CurrentAccountBalance -= Amount;
                 destinationAccount.CurrentAccountBalance += Amount;
 
-                //Initialize the transaction object
-                transaction.TransactionType = TransType.Deposite;
-                transaction.TrnsactionSourceAccount = _ourBankSettelmentAccount;
-                transaction.TransactionDestinationAccount = AccountNumber;
-                transaction.TransactionAmount = Amount;
-                transaction.TransactionDate = DateTime.Now;
 
                 if ((_dbContext.Entry(sourceAccount).State == Microsoft.EntityFrameworkCore.EntityState.Modified) &&
                     (_dbContext.Entry(destinationAccount).State == Microsoft.EntityFrameworkCore.EntityState.Modified))
                 {
                     //so transaction successful
                     transaction.TrnsactionStatus = TransStatus.Success;
-                    response.ResponseCode = "00";
+                    response.ResponseCode = "02";
                     response.ResponseMessage = "Transaction successful!";
                     response.Data = null;
                 }
@@ -91,7 +87,7 @@ namespace BankAPI.Services.Implementations
                 {
                     //so transaction unsuccessful
                     transaction.TrnsactionStatus = TransStatus.Failed;
-                    response.ResponseCode = "01";
+                    response.ResponseCode = "02";
                     response.ResponseMessage = "Transaction failed!";
                     response.Data = null;
                 }
@@ -102,9 +98,9 @@ namespace BankAPI.Services.Implementations
             {
                 _Logger.LogError($"N ERROR OCCURRED..... =>{ex.Message}");
                 //Set response object in case of exception
-                response.ResponseCode = "01";
-                response.ResponseMessage = "Transaction failed due to an error!";
-                response.Data = null;
+                //response.ResponseCode = "01";
+                //response.ResponseMessage = "Transaction failed due to an error!";
+                //response.Data = null;
             }
             transaction.TransactionType = TransType.Deposite;
             transaction.TransactionDate = DateTime.Now;
@@ -124,7 +120,76 @@ namespace BankAPI.Services.Implementations
 
         Response ITransactionService.MakeFundsTransfer(string FromAccount, string ToAccount, decimal Amount, string TransactionPin)
         {
-            throw new NotImplementedException();
+            Response response = new Response();
+            Account sourceAccount;
+            Account destinationAccount;
+            Transaction transaction = new Transaction();
+
+            //First check if the user  - account owner is valid
+            //we'll need authenticate in UserService, so let's inject IUserService Here
+            var authUser = _accountService.Authenticate(FromAccount, TransactionPin);
+            if (authUser == null) throw new ApplicationException("Invalid Credentials");
+
+            try
+            {
+                //or deposite, our bankSettlemenAccount is the detination geting mouney from the user's account
+                sourceAccount = _accountService.GetByNumber(FromAccount);
+                destinationAccount = _accountService.GetByNumber(ToAccount);
+
+                //Now let's update their account balances
+                sourceAccount.CurrentAccountBalance -= Amount;
+                destinationAccount.CurrentAccountBalance += Amount;
+
+
+
+                if ((_dbContext.Entry(sourceAccount).State == Microsoft.EntityFrameworkCore.EntityState.Modified) &&
+                    (_dbContext.Entry(destinationAccount).State == Microsoft.EntityFrameworkCore.EntityState.Modified))
+                {
+                    //so transaction successful
+                    transaction.TrnsactionStatus = TransStatus.Success;
+                    response.ResponseCode = "00";
+                    response.ResponseMessage = "Transaction successful!";
+                    response.Data = null;
+                }
+                else
+                {
+                    //so transaction unsuccessful
+                    transaction.TrnsactionStatus = TransStatus.Failed;
+                    response.ResponseCode = "02";
+                    response.ResponseMessage = "Transaction failed!";
+                    response.Data = null;
+                }
+
+                //set other props of transaction here
+                transaction.TrnsactionParticulars = $"NEW TRANSACTION FROM SOURCE => {System.Text.Json.JsonSerializer.Serialize(transaction.TrnsactionSourceAccount)} To Destination Account => {System.Text.Json.JsonSerializer.Serialize(transaction.TransactionDestinationAccount)} ON DATE => {transaction.TransactionDate} FOR AMOUNT => {System.Text.Json.JsonSerializer.Serialize(transaction.TransactionAmount)} TRANSACTION TYPE =>{System.Text.Json.JsonSerializer.Serialize(transaction.TransactionType)} TRANSACTION STATUS =>{System.Text.Json.JsonSerializer.Serialize(transaction.TrnsactionStatus)}";
+
+                //Add the transaction to the context and save changes
+                _dbContext.Transactions.Add(transaction);
+                _dbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                _Logger.LogError($"N ERROR OCCURRED..... =>{ex.Message}");
+                //Set response object in case of exception
+                response.ResponseCode = "01";
+                response.ResponseMessage = "Transaction failed due to an error!";
+                response.Data = null;
+            }
+
+            transaction.TransactionType = TransType.Transfer;
+            transaction.TransactionDate = DateTime.Now;
+            transaction.TransactionAmount = Amount;
+            transaction.TrnsactionSourceAccount = FromAccount;
+            transaction.TransactionDestinationAccount = ToAccount;
+
+
+            //set other props of transaction here
+            transaction.TrnsactionParticulars = $"NEW TRANSACTION FROM SOURCE => {System.Text.Json.JsonSerializer.Serialize(transaction.TrnsactionSourceAccount)} To Destination Account => {System.Text.Json.JsonSerializer.Serialize(transaction.TransactionDestinationAccount)} ON DATE => {transaction.TransactionDate} FOR AMOUNT => {System.Text.Json.JsonSerializer.Serialize(transaction.TransactionAmount)} TRANSACTION TYPE =>{System.Text.Json.JsonSerializer.Serialize(transaction.TransactionType)} TRANSACTION STATUS =>{System.Text.Json.JsonSerializer.Serialize(transaction.TrnsactionStatus)}";
+
+            _dbContext.Transactions.Add(transaction);
+            _dbContext.SaveChanges();
+            //Return the response object
+            return response;
         }
 
         Response ITransactionService.MakeWithdrawl(string AccountNumber, decimal Amount, string TransactionPin)
@@ -149,12 +214,7 @@ namespace BankAPI.Services.Implementations
                 sourceAccount.CurrentAccountBalance -= Amount;
                 destinationAccount.CurrentAccountBalance += Amount;
 
-                //Initialize the transaction object
-                transaction.TransactionType = TransType.Deposite;
-                transaction.TrnsactionSourceAccount = _ourBankSettelmentAccount;
-                transaction.TransactionDestinationAccount = AccountNumber;
-                transaction.TransactionAmount = Amount;
-                transaction.TransactionDate = DateTime.Now;
+                
 
                 if ((_dbContext.Entry(sourceAccount).State == Microsoft.EntityFrameworkCore.EntityState.Modified) &&
                     (_dbContext.Entry(destinationAccount).State == Microsoft.EntityFrameworkCore.EntityState.Modified))
@@ -169,7 +229,7 @@ namespace BankAPI.Services.Implementations
                 {
                     //so transaction unsuccessful
                     transaction.TrnsactionStatus = TransStatus.Failed;
-                    response.ResponseCode = "01";
+                    response.ResponseCode = "02";
                     response.ResponseMessage = "Transaction failed!";
                     response.Data = null;
                 }

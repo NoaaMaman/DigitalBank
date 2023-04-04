@@ -12,6 +12,6 @@ namespace BankAPI.DAL
 
         public DbSet<Transaction> Transactions { get; set; }
 
-
+        public DbSet<TransactionTypes> TransactionTyes { get; set; }
     }
 }
