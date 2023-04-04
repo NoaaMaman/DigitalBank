@@ -2,7 +2,7 @@
 
 namespace BankAPI.Services.Interfaces
 {
-    public interface ITransaction
+    public interface ITransactionService
     {
         Response CreateNewTransaction(Transaction transaction);
 
