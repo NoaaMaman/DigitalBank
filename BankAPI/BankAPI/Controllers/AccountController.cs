@@ -46,6 +46,7 @@ namespace BankAPI.Controllers
         }
 
         [HttpPost]
+        [Route("authentication")]
         public IActionResult Authenticate([FromBody]AuthenticateModel model)
         {
             if (!ModelState.IsValid) return BadRequest(model);

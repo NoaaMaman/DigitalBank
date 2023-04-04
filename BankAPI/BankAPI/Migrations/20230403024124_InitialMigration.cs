@@ -26,7 +26,7 @@ namespace BankAPI.Migrations
                     AccountType = table.Column<int>(type: "int", nullable: false),
                     AccountNumberGenerated = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PinHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
-                    PinSalt = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PinSalt = table.Column<string>(type: "varbinary(max)", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DateLastUpdated = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },

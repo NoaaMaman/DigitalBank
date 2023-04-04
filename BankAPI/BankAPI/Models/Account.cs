@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace BankAPI
 {
@@ -32,22 +33,26 @@ namespace BankAPI
 
         public string AccountNumberGenerated { get; set; } = default!;
 
-        [Column("PinHash")]
+        [JsonIgnore]
         public byte[] PinHash { get; set; } = default!;
 
+        [JsonIgnore]
         public byte[] PinSalt { get; set; } = default!;
 
         public DateTime DateCreated { get; set; } = default!;
 
         public DateTime DateLastUpdated { get; set; } = default!;
 
+        Random rand = new Random();
         public Account()
         {
-            Random random = new Random();
-            long accountNumber = (long)(Math.Floor(random.NextDouble() * 9_000_000_000L) + 1_000_000_000L);
-            AccountNumberGenerated = accountNumber.ToString();
 
+            //long accountNumber = (long)(Math.Floor(random.NextDouble() * 9_000_000_000L) + 1_000_000_000L);
+            //AccountNumberGenerated = accountNumber.ToString();
+
+            AccountNumberGenerated = Convert.ToString((long)Math.Floor((rand.NextDouble() * 9_000_000_000L) + 1_000_000_000L));
             AccountName = $"{FirstName} {LastName}";
+
         }
     }
 
