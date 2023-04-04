@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "M7OdrM/73Az9Z7GPoYnXg/L1qLURToxamvvsE6cVtgIKg3xIw6hivecFgQrY/n7gafIzf6hfU6+WPs2yXmj01A==",
+  "dgSpecHash": "DmPvgBKCK5WYJ1PuAx80r4tas372iaWYss8hlceC317GKOAFnaxN5EhAENXx0Y3lU2dvxUG5nDOoxZ8syi7+YA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankProject\\src\\Bankproject.Business\\Bankproject.Business.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0-preview.2.23128.3\\microsoft.extensions.dependencyinjection.abstractions.8.0.0-preview.2.23128.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
