@@ -2,6 +2,8 @@
 using BankAPI.Models;
 using BankAPI.Services.Implementations;
 using BankAPI.Services.Interfaces;
+using Newtonsoft.Json;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace BankAPI
@@ -19,6 +21,8 @@ namespace BankAPI
         {
             services.AddDbContext<youBankingDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("youBankingDbConnection")));
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<ITransactionService, TransactionService>();
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
             {

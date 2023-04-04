@@ -8,9 +8,11 @@ namespace BankAPI.Profiles
         public AutomapperProfiles()
         {
             CreateMap<RegisterNewAccountModel, Account>();
-
             CreateMap<UpdateAccountModel, Account>();
             CreateMap<Account, GetAccountModel>();
+
+            CreateMap<TransactionRequestDto, Transaction>();
+
 
         }
 

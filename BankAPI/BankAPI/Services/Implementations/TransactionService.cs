@@ -115,6 +115,7 @@ namespace BankAPI.Services.Implementations
             //Add the transaction to the context and save changes
             _dbContext.Transactions.Add(transaction);
             _dbContext.SaveChanges();
+            return response;
         }
 
 
