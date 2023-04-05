@@ -89,3 +89,16 @@ C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\obj\Debug\net6.0\BankAPI.
 C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\obj\Debug\net6.0\ref\BankAPI.dll
 C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
 C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Serilog.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\BankAPI\bin\Debug\net6.0\Serilog.Sinks.File.dll

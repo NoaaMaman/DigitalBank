@@ -5,6 +5,8 @@ using BankAPI.Services.Interfaces;
 using Newtonsoft.Json;
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 
 namespace BankAPI
 {
@@ -23,17 +25,34 @@ namespace BankAPI
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ITransactionService, TransactionService>();
 
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v2", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
                     Title = "BankAPI doc",
                     Version = "v2",
-                    Description = "This is the API which manage the Accounts and the transactions"
+                    Description = "This is the API which manages the Accounts and the transactions"
                 });
             });
-            services.AddControllers();
+
+            //Log.Logger = new LoggerConfiguration()
+            //    .MinimumLevel.Debug()
+            //    .WriteTo.File("log/AccountsLog.txt", rollingInterval: RollingInterval.Day)
+            //    .CreateLogger();
+
+            services.AddControllers()
+                    .AddNewtonsoftJson(options =>
+                    {
+                        options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                        options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                    });
+
+            services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.AddSerilog(dispose: true);
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -42,6 +61,7 @@ namespace BankAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+            //app.UseSerilogRequestLogging();
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -54,7 +74,6 @@ namespace BankAPI
             {
                 var prefix = string.IsNullOrEmpty(x.RoutePrefix) ? "." : "..";
                 x.SwaggerEndpoint($"{prefix}/swagger/v2/swagger.json", "BankAPI doc");
-
             });
 
             app.UseEndpoints(endpoints =>

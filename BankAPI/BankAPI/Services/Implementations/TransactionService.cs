@@ -4,7 +4,6 @@ using BankAPI.Utility;
 using Microsoft.Extensions.Options;
 using Microsoft.Identity.Client;
 using System.Text.Json.Serialization;
-using Response = BankAPI.Models.Response;
 
 
 

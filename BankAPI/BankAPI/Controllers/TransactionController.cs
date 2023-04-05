@@ -17,9 +17,10 @@ namespace BankAPI.Controllers
     {
         private ITransactionService _transactionService;
         IMapper _mapper;
-
-        public TransactionController(ITransactionService transactionService,IMapper mapper)
+        private readonly ILogger<TransactionController> _logger;
+        public TransactionController(ITransactionService transactionService,IMapper mapper, ILogger<TransactionController> logger)
         {
+            _logger = logger;
             _transactionService = transactionService;
             _mapper = mapper;
         }
