@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using AutoMapper.Configuration.Conventions;
+using BankAPI.Models;
 using BankAPI.Models.DTOS.AccountDTO;
 using BankAPI.Services.Interfaces;
 using Microsoft.AspNetCore.JsonPatch;
@@ -18,6 +19,8 @@ namespace BankAPI.Controllers
         private readonly ILogger<AccountController> _logger; 
         private IAccountService _accountService;
         //Bring AutoMapper
+        private readonly APIResponse _response;
+
 
         IMapper _mapper;
 
@@ -26,40 +29,48 @@ namespace BankAPI.Controllers
             _logger = logger;
             _accountService = accountService;
             _mapper = mapper;
+            this._response = new();
         }
 
         [HttpPost]
         [Route("create_new_account")]
-        public IActionResult RegisterNewAccount([FromBody]RegisterNewAccountModel newAccount)
+        public async Task<ActionResult<APIResponse>> RegisterNewAccount([FromBody]RegisterNewAccountModel newAccount)
         {
             if (!ModelState.IsValid) return BadRequest(newAccount);
 
             //Map to account
             var account = _mapper.Map<Account>(newAccount);
-            return Ok(_accountService.CreateAsync(account, newAccount.Pin, newAccount.ConfirmPin));
+            _response.Result = _accountService.CreateAsync(account, newAccount.Pin, newAccount.ConfirmPin);
+            _response.StatusCode = System.Net.HttpStatusCode.OK; 
+
+            return Ok();
 
         }
         [HttpGet]
         [Route("get_all_accounts")]
-        public IActionResult GetAllAccounts()
+        public async Task<ActionResult<APIResponse>> GetAllAccounts()
         {
             _logger.LogInformation("Getting all Accounts");
-            var accounts = _accountService.GetAllAccountsAsync();
-            var CleanedAccounts = _mapper.Map<IList<GetAccountModel>>(accounts);
-            _logger.LogInformation("Getting all Accounts");
-            return Ok(CleanedAccounts);
+            var accounts = await _accountService.GetAllAccountsAsync();
+            _response.Result = _mapper.Map<IList<GetAccountModel>>(accounts);
+            _response.StatusCode = System.Net.HttpStatusCode.OK;
+            //_logger.LogInformation("Getting all Accounts");
+            return Ok(_response);
         }
 
         [HttpPost]
         [Route("authentication")]
-        public IActionResult Authenticate([FromBody] AuthenticateModel model)
+        public async Task<ActionResult<APIResponse>> Authenticate([FromBody] AuthenticateModel model)
         {
             if (!ModelState.IsValid) return BadRequest(model);
 
-            //Now lets map
+            var result = await _accountService.AuthenticateAsync(model.AccountNumber, model.Pin);
+            _response.Result = result;
+            _response.StatusCode = System.Net.HttpStatusCode.OK;
 
-            return Ok(_accountService.AuthenticateAsync(model.AccountNumber, model.Pin));
+            return Ok(_response);
         }
+
 
         [HttpGet]
         [Route("get_by_account_number")]
@@ -74,17 +85,19 @@ namespace BankAPI.Controllers
 
         [HttpGet]
         [Route("get_by_account_by_id")]
-        public IActionResult GetByAccountId(int Id)
+        public async Task<ActionResult<APIResponse>> GetByAccountId(int Id)
         {
 
-            var account = _accountService.GetByIdAsync(Id);
-            var cleanedAccount = _mapper.Map<GetAccountModel>(account);
-            _logger.LogInformation("Get Account with ID: "+Id);
-            return Ok(cleanedAccount);
+            var account = await _accountService.GetByIdAsync(Id);
+            _response.Result = _mapper.Map<GetAccountModel>(account);
+            _response.StatusCode=System.Net.HttpStatusCode.OK;
+
+            //_logger.LogInformation("Get Account with ID: "+Id);
+            return Ok(_response);
         }
         [HttpPut]
         [Route("update_account")]
-        public IActionResult UpdateAccount([FromBody] UpdateAccountModel model, string Pin)
+        public IActionResult UpdateAccount([FromBody]UpdateAccountModel model, string Pin)
         {
             if (!ModelState.IsValid) return BadRequest(model);
 
