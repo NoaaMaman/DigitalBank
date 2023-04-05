@@ -4,15 +4,15 @@ namespace BankAPI.Services.Interfaces
 {
     public interface ITransactionService
     {
-        Response CreateNewTransaction(Transaction transaction);
+        Task<Response> CreateNewTransactionAsync(Transaction transaction);
 
-        Response FindTransactionByDate(DateTime date);
+        Task<Response> FindTransactionByDateAsync(DateTime date);
 
-        Response MakeDeposite(string AccountNumber, decimal Amount, string TransactionPin);
+        Task<Response> MakeDepositeAsync(string AccountNumber, decimal Amount, string TransactionPin);
 
-        Response MakeWithdrawl(string AccountNumber, decimal Amount, string TransactionPin);
+        Task<Response> MakeWithdrawlAsync(string AccountNumber, decimal Amount, string TransactionPin);
 
-        Response MakeFundsTransfer(string FromAccount, string ToAccount, decimal Amount, string TransactionPin);
+        Task<Response> MakeFundsTransferAsync(string FromAccount, string ToAccount, decimal Amount, string TransactionPin);
 
     
     }

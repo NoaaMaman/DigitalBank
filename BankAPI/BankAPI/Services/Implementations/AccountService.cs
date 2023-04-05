@@ -14,7 +14,7 @@ namespace BankAPI.Services.Implementations
             _dbContext = dbContext;
 
         }
-        Account? IAccountService.Authenticate(string AccountNumber, string Pin)
+        async Task<Account> IAccountService.AuthenticateAsync(string AccountNumber, string Pin)
         {
             var account = _dbContext.Accounts.Where(x => x.AccountNumberGenerated == AccountNumber).SingleOrDefault();
             if (account == null)
@@ -40,7 +40,7 @@ namespace BankAPI.Services.Implementations
             return true;
         }
 
-        Account IAccountService.Create(Account account, string Pin, string ConfirmPin)
+        async Task<Account> IAccountService.CreateAsync(Account account, string Pin, string ConfirmPin)
         {
             if (_dbContext.Accounts.Any(x => x.Email == account.Email)) throw new ApplicationException("An account allready exists with this email");
 
@@ -80,12 +80,12 @@ namespace BankAPI.Services.Implementations
             }
         }
 
-        IEnumerable<Account> IAccountService.GetAllAccounts()
+        async Task<IEnumerable<Account>> IAccountService.GetAllAccountsAsync()
         {
             return  _dbContext.Accounts.ToList();
         }
 
-        void IAccountService.Update(Account account, string Pin = null)
+        async Task IAccountService.UpdateAsync(Account account, string Pin = null)
         {
             var accountToBeUpdated = _dbContext.Accounts.Where(x => x.Email == account.Email).SingleOrDefault();
             if (accountToBeUpdated == null) throw new ApplicationException("Account does not exist");
@@ -122,7 +122,7 @@ namespace BankAPI.Services.Implementations
             _dbContext.SaveChanges();
         }
 
-        Account IAccountService.GetById(int id)
+        async Task<Account> IAccountService.GetByIdAsync(int id)
         {
             var account = _dbContext.Accounts.Where(x => x.AccountId == id).FirstOrDefault();
             if (account == null)
@@ -130,7 +130,7 @@ namespace BankAPI.Services.Implementations
             return account;
         }
 
-        Account IAccountService.GetByNumber(string AccountNumber)
+        async Task<Account> IAccountService.GetByNumberAsync(string AccountNumber)
         {
             var account = _dbContext.Accounts.Where(x => x.AccountNumberGenerated == AccountNumber).FirstOrDefault();
             if (account == null) return null;

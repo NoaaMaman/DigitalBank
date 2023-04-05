@@ -36,7 +36,7 @@ namespace BankAPI.Controllers
 
             //Map to account
             var account = _mapper.Map<Account>(newAccount);
-            return Ok(_accountService.Create(account, newAccount.Pin, newAccount.ConfirmPin));
+            return Ok(_accountService.CreateAsync(account, newAccount.Pin, newAccount.ConfirmPin));
 
         }
         [HttpGet]
@@ -44,7 +44,7 @@ namespace BankAPI.Controllers
         public IActionResult GetAllAccounts()
         {
             _logger.LogInformation("Getting all Accounts");
-            var accounts = _accountService.GetAllAccounts();
+            var accounts = _accountService.GetAllAccountsAsync();
             var CleanedAccounts = _mapper.Map<IList<GetAccountModel>>(accounts);
             _logger.LogInformation("Getting all Accounts");
             return Ok(CleanedAccounts);
@@ -58,7 +58,7 @@ namespace BankAPI.Controllers
 
             //Now lets map
 
-            return Ok(_accountService.Authenticate(model.AccountNumber, model.Pin));
+            return Ok(_accountService.AuthenticateAsync(model.AccountNumber, model.Pin));
         }
 
         [HttpGet]
@@ -67,7 +67,7 @@ namespace BankAPI.Controllers
         {
             if (!Regex.IsMatch(AccountNumber, @"^[0][1-9]\d{9}$|^[1-9]\d{9}$"))
                 return BadRequest("Account number must be 10-digit");
-            var account = _accountService.GetByNumber(AccountNumber);
+            var account = _accountService.GetByNumberAsync(AccountNumber);
             var cleanedAccount = _mapper.Map<GetAccountModel>(account);
             return Ok(cleanedAccount);
         }
@@ -77,7 +77,7 @@ namespace BankAPI.Controllers
         public IActionResult GetByAccountId(int Id)
         {
 
-            var account = _accountService.GetById(Id);
+            var account = _accountService.GetByIdAsync(Id);
             var cleanedAccount = _mapper.Map<GetAccountModel>(account);
             _logger.LogInformation("Get Account with ID: "+Id);
             return Ok(cleanedAccount);
@@ -92,7 +92,7 @@ namespace BankAPI.Controllers
                 return BadRequest();
             var account = _mapper.Map<Account>(model);
             string pin = model.Pin;
-            _accountService.Update(account, pin);
+            _accountService.UpdateAsync(account, pin);
             return NoContent(); ;
 
 
@@ -102,10 +102,14 @@ namespace BankAPI.Controllers
         {
             if (Id == 0) return BadRequest();
             // var account = _accountService.GetById(Id);
-            var account = _accountService.GetAllAccounts().FirstOrDefault(u => u.AccountId == Id);
-
+            var account = _accountService.GetByIdAsync(Id);
             if (account == null)
+            {
                 return NotFound();
+            }
+
+
+           
             _accountService.Delete(Id);
             return Ok();
 

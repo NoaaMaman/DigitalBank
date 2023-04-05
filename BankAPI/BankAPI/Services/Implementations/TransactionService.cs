@@ -24,7 +24,7 @@ namespace BankAPI.Services.Implementations
             _ourBankSettelmentAccount = _settings.OurBankSettlementAccount;
             _accountService = accountService;
         }
-        Response ITransactionService.CreateNewTransaction(Transaction transaction)
+        async Task<Response> ITransactionService.CreateNewTransactionAsync(Transaction transaction)
         {
            //Create New Transaction
            Response response = new Response();
@@ -38,7 +38,7 @@ namespace BankAPI.Services.Implementations
         }
         
 
-        Response ITransactionService.FindTransactionByDate(DateTime date)
+        async Task<Response> ITransactionService.FindTransactionByDateAsync(DateTime date)
         {
             Response response = new Response();
             var transaction = _dbContext.Transactions.Where(x => x.TransactionDate == date).ToList();
@@ -49,7 +49,7 @@ namespace BankAPI.Services.Implementations
             return response;
         }
 
-        public Response MakeDeposite(string AccountNumber, decimal Amount, string TransactionPin)
+        async Task<Response> ITransactionService.MakeDepositeAsync(string AccountNumber, decimal Amount, string TransactionPin)
         {
             Response response = new Response();
             Account sourceAccount;
@@ -58,15 +58,15 @@ namespace BankAPI.Services.Implementations
 
             //First check if the user  - account owner is valid
             //we'll need authenticate in UserService, so let's inject IUserService Here
-            var authUser = _accountService.Authenticate(AccountNumber, TransactionPin);
+            var authUser = _accountService.AuthenticateAsync(AccountNumber, TransactionPin);
 
             if (authUser == null) throw new ApplicationException("Invalid Credentials");
 
             try
             {
                 //or deposite, our bankSettlemenAccount is the source giving mouney to the user's account
-                sourceAccount = _accountService.GetByNumber(_ourBankSettelmentAccount);
-                destinationAccount = _accountService.GetByNumber(AccountNumber);
+                sourceAccount = await _accountService.GetByNumberAsync(_ourBankSettelmentAccount);
+                destinationAccount = await _accountService.GetByNumberAsync(AccountNumber);
 
                 //Now let's update their account balances
                 sourceAccount.CurrentAccountBalance -= Amount;
@@ -118,7 +118,7 @@ namespace BankAPI.Services.Implementations
         }
 
 
-        Response ITransactionService.MakeFundsTransfer(string FromAccount, string ToAccount, decimal Amount, string TransactionPin)
+        async Task<Response> ITransactionService.MakeFundsTransferAsync(string FromAccount, string ToAccount, decimal Amount, string TransactionPin)
         {
             Response response = new Response();
             Account sourceAccount;
@@ -127,14 +127,14 @@ namespace BankAPI.Services.Implementations
 
             //First check if the user  - account owner is valid
             //we'll need authenticate in UserService, so let's inject IUserService Here
-            var authUser = _accountService.Authenticate(FromAccount, TransactionPin);
+            var authUser = _accountService.AuthenticateAsync(FromAccount, TransactionPin);
             if (authUser == null) throw new ApplicationException("Invalid Credentials");
 
             try
             {
                 //or deposite, our bankSettlemenAccount is the detination geting mouney from the user's account
-                sourceAccount = _accountService.GetByNumber(FromAccount);
-                destinationAccount = _accountService.GetByNumber(ToAccount);
+                sourceAccount = await _accountService.GetByNumberAsync(FromAccount);
+                destinationAccount =await _accountService.GetByNumberAsync(ToAccount);
 
                 //Now let's update their account balances
                 sourceAccount.CurrentAccountBalance -= Amount;
@@ -192,7 +192,7 @@ namespace BankAPI.Services.Implementations
             return response;
         }
 
-        Response ITransactionService.MakeWithdrawl(string AccountNumber, decimal Amount, string TransactionPin)
+        async Task<Response> ITransactionService.MakeWithdrawlAsync(string AccountNumber, decimal Amount, string TransactionPin)
         {
             Response response = new Response();
             Account sourceAccount;
@@ -201,14 +201,14 @@ namespace BankAPI.Services.Implementations
 
             //First check if the user  - account owner is valid
             //we'll need authenticate in UserService, so let's inject IUserService Here
-            var authUser = _accountService.Authenticate(AccountNumber, TransactionPin);
+            var authUser = _accountService.AuthenticateAsync(AccountNumber, TransactionPin);
             if (authUser == null) throw new ApplicationException("Invalid Credentials");
 
             try
             {
                 //or deposite, our bankSettlemenAccount is the detination geting mouney from the user's account
-                sourceAccount = _accountService.GetByNumber(AccountNumber);
-                destinationAccount = _accountService.GetByNumber(_ourBankSettelmentAccount);
+                sourceAccount = await _accountService.GetByNumberAsync(AccountNumber);
+                destinationAccount =await  _accountService.GetByNumberAsync(_ourBankSettelmentAccount);
 
                 //Now let's update their account balances
                 sourceAccount.CurrentAccountBalance -= Amount;
@@ -265,5 +265,7 @@ namespace BankAPI.Services.Implementations
             //Return the response object
             return response;
         }
+
+        
     }
 }

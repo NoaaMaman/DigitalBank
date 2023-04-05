@@ -4,18 +4,18 @@ namespace BankAPI.Services.Interfaces
 {
     public interface IAccountService
     {
-        Account Authenticate(string AccountNumber, string Pin);
+        Task<Account> AuthenticateAsync(string AccountNumber, string Pin);
 
-        IEnumerable<Account> GetAllAccounts();
+        Task<IEnumerable<Account>> GetAllAccountsAsync();
 
-        Account Create(Account account, string Pin, string ConfirmPin);
+        Task<Account> CreateAsync(Account account, string Pin, string ConfirmPin);
 
-        void Update(Account account, string pin = null);
+        Task UpdateAsync(Account account, string pin = null);
 
         void Delete(int id);
 
-        Account GetById(int id);
+        Task<Account> GetByIdAsync(int id);
 
-        Account GetByNumber(string AccountNumber);
+        Task<Account> GetByNumberAsync(string AccountNumber);
     }
 }

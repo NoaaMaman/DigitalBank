@@ -32,7 +32,7 @@ namespace BankAPI.Controllers
             if(!ModelState.IsValid) return BadRequest(ModelState);
 
             var transaction = _mapper.Map<Transaction>(transactionRequest);
-            return Ok(_transactionService.CreateNewTransaction(transaction));
+            return Ok(_transactionService.CreateNewTransactionAsync(transaction));
 
         }
 
@@ -43,7 +43,7 @@ namespace BankAPI.Controllers
         {
             if (!Regex.IsMatch(AccountNumber, @"^[0][1-9]\d{9}$|^[1-9]\d{9}$"))
                 return BadRequest("Account number must be 10-digit");
-            return Ok(_transactionService.MakeDeposite(AccountNumber, Amount, TransactionPin));
+            return Ok(_transactionService.MakeDepositeAsync(AccountNumber, Amount, TransactionPin));
 
         }
 
@@ -53,7 +53,7 @@ namespace BankAPI.Controllers
         {
             if (!Regex.IsMatch(AccountNumber, @"^[0][1-9]\d{9}$|^[1-9]\d{9}$"))
                 return BadRequest("Account number must be 10-digit");
-            return Ok(_transactionService.MakeWithdrawl(AccountNumber, Amount, TransactionPin));
+            return Ok(_transactionService.MakeWithdrawlAsync(AccountNumber, Amount, TransactionPin));
         }
 
         [HttpPost]
@@ -63,7 +63,7 @@ namespace BankAPI.Controllers
             if ((!Regex.IsMatch(FromAccount, @"^[0][1-9]\d{9}$|^[1-9]\d{9}$"))||(!Regex.IsMatch(ToAccount, @"^[0][1-9]\d{9}$|^[1-9]\d{9}$")))
                 return BadRequest("Account number must be 10-digit");
 
-            return Ok(_transactionService.MakeFundsTransfer(FromAccount,ToAccount,Amount, TransactionPin));
+            return Ok(_transactionService.MakeFundsTransferAsync(FromAccount,ToAccount,Amount, TransactionPin));
         }
 
     }
