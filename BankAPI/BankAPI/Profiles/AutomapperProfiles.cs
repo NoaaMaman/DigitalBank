@@ -8,11 +8,10 @@ namespace BankAPI.Profiles
     {
         public AutomapperProfiles()
         {
-            CreateMap<RegisterNewAccountModel, Account>();
-            CreateMap<UpdateAccountModel, Account>();
-            CreateMap<Account, GetAccountModel>();
-
-            CreateMap<TransactionRequestDto, Transaction>();
+            CreateMap<RegisterNewAccountModel, Account>().ReverseMap();
+            CreateMap<UpdateAccountModel, Account>().ReverseMap();
+            CreateMap<Account, GetAccountModel>().ReverseMap();
+            CreateMap<TransactionRequestDto, Transaction>().ReverseMap();
 
 
         }

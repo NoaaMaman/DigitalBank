@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using BankAPI.Profiles;
 
 namespace BankAPI
 {
@@ -22,6 +23,9 @@ namespace BankAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<youBankingDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("youBankingDbConnection")));
+
+            services.AddAutoMapper(typeof(AutomapperProfiles));
+            
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ITransactionService, TransactionService>();
 
