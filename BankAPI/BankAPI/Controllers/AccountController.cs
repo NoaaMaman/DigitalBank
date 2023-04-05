@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 namespace BankAPI.Controllers
 {
     [ApiController]
-    [Route("api/v3/[controller]")]
+    [Route("api/AccountAPI")]
     public class AccountController : ControllerBase
     {
         //Here We inject the Account service
@@ -30,7 +30,7 @@ namespace BankAPI.Controllers
 
         [HttpPost]
         [Route("create_new_account")]
-        public IActionResult RegisterNewAccount([FromBody] RegisterNewAccountModel newAccount)
+        public IActionResult RegisterNewAccount([FromBody]RegisterNewAccountModel newAccount)
         {
             if (!ModelState.IsValid) return BadRequest(newAccount);
 

@@ -3827,6 +3827,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Bank_Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Bank_Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bank_Utility.dll": {}
+        }
       }
     }
   },
@@ -10951,11 +10961,17 @@
       "type": "project",
       "path": "../BankAPI/BankAPI.csproj",
       "msbuildProject": "../BankAPI/BankAPI.csproj"
+    },
+    "Bank_Utility/1.0.0": {
+      "type": "project",
+      "path": "../Bank_Utility/Bank_Utility.csproj",
+      "msbuildProject": "../Bank_Utility/Bank_Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "BankAPI >= 1.0.0",
+      "Bank_Utility >= 1.0.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0"
     ]
   },
@@ -10994,6 +11010,9 @@
           "projectReferences": {
             "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\BankAPI\\BankAPI.csproj": {
               "projectPath": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\BankAPI\\BankAPI.csproj"
+            },
+            "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\Bank_Utility\\Bank_Utility.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\Bank_Utility\\Bank_Utility.csproj"
             }
           }
         }

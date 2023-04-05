@@ -9,6 +9,7 @@
       "WebApp/1.0.0": {
         "dependencies": {
           "BankAPI": "1.0.0",
+          "Bank_Utility": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0"
         },
         "runtime": {
@@ -2192,6 +2193,11 @@
         "runtime": {
           "BankAPI.dll": {}
         }
+      },
+      "Bank_Utility/1.0.0": {
+        "runtime": {
+          "Bank_Utility.dll": {}
+        }
       }
     }
   },
@@ -3693,6 +3699,11 @@
       "hashPath": "umbracocms.core.8.18.7.nupkg.sha512"
     },
     "BankAPI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Bank_Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
