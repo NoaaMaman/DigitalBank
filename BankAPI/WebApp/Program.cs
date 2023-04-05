@@ -1,7 +1,15 @@
+using BankAPI.Services.Implementations;
+using BankAPI.Services.Interfaces;
+using BankAPI.DAL;
+using WebApp.Models.DTOS.AccountDTO;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddHttpClient<IAccountService, AccountService>();
+builder.Services.AddDbContext<youBankingDbContext>();
 
 var app = builder.Build();
 

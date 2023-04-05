@@ -3,7 +3,7 @@ using WebApp.Services.IServices;
 
 namespace WebApp.Services
 {
-    public interface IAccountServices
+    public interface IAccountServicesApp
     {
         Task<T> GetAllAsync<T>();
 

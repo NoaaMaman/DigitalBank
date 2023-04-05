@@ -7,18 +7,18 @@ using WebApp.Models;
 
 namespace WebApp.Services
 {
-    public class AccountService : BaseService, IAccountServices
+    public class AccountServiceApp : BaseService, IAccountServicesApp
     {
         private readonly IHttpClientFactory _clientFactory;
         private string accountUrl;
 
-        public AccountService(IHttpClientFactory clientFactory, IConfiguration configuration) : base(clientFactory)
+        public AccountServiceApp(IHttpClientFactory clientFactory, IConfiguration configuration) : base(clientFactory)
         {
             _clientFactory = clientFactory;
             accountUrl = configuration.GetValue<string>("ServiceUrls:BankAPI");
         }
 
-        Task<T> IAccountServices.CreateAsync<T>(BankAPI.Models.DTOS.AccountDTO.RegisterNewAccountModel dto)
+        Task<T> IAccountServicesApp.CreateAsync<T>(BankAPI.Models.DTOS.AccountDTO.RegisterNewAccountModel dto)
         {
             return sendAsync<T>(new APIRequest()
             {
@@ -55,14 +55,14 @@ namespace WebApp.Services
             });
         }
 
-        Task<T> IAccountServices.UpdateAsync<T>(BankAPI.Models.DTOS.AccountDTO.UpdateAccountModel dto)
+        Task<T> IAccountServicesApp.UpdateAsync<T>(BankAPI.Models.DTOS.AccountDTO.UpdateAccountModel dto)
         {
             return sendAsync<T>(new APIRequest()
             {
                 ApiType = DS.ApiType.PUT,
                 Data = dto,
-                Url = accountUrl + "api/AccountAPI"
-            });
+                Url = accountUrl + "api/AccountAPI" + dto.Id
+            });;
         }
 
         
