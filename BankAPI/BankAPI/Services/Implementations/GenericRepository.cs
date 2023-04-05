@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Security.Principal;
 using System.Threading.Tasks;
+using Umbraco.Core.Models.Entities;
 
 namespace BankAPI.Services.Implementations
 {

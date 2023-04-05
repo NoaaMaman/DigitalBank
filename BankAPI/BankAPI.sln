@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAPI", "BankAPI\BankAPI.csproj", "{F4BC2FE7-0653-4FCE-A958-441B4E2DEC8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAPI", "BankAPI\BankAPI.csproj", "{F4BC2FE7-0653-4FCE-A958-441B4E2DEC8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{F3C4101D-B54E-472B-83F2-78E5848534B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F4BC2FE7-0653-4FCE-A958-441B4E2DEC8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4BC2FE7-0653-4FCE-A958-441B4E2DEC8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4BC2FE7-0653-4FCE-A958-441B4E2DEC8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C4101D-B54E-472B-83F2-78E5848534B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C4101D-B54E-472B-83F2-78E5848534B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C4101D-B54E-472B-83F2-78E5848534B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C4101D-B54E-472B-83F2-78E5848534B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
