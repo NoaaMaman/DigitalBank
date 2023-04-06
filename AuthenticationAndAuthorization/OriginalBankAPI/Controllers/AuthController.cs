@@ -46,7 +46,7 @@ namespace BankApI.Controllers
 
         private string CreateToken(IEnumerable<Claim> claims, DateTime expiresAt)
         {
-            var secretKey = Encoding.ASCII.GetBytes(configuration.GetValue<string>("SecretKey"));
+            var secretKey = configuration.GetValue<string>("SecretKey") ?? throw new ArgumentNullException("SecretKey is missing in configuration.");
 
             var jwt = new JwtSecurityToken(
                 claims: claims,
