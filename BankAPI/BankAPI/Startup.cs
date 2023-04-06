@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using BankAPI.Profiles;
 
+
 namespace BankAPI
 {
     public class Startup
@@ -66,6 +67,7 @@ namespace BankAPI
                 app.UseDeveloperExceptionPage();
             }
             //app.UseSerilogRequestLogging();
+            app.UseHttpLogging();
             app.UseHttpsRedirection();
 
             app.UseRouting();
