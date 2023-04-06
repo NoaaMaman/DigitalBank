@@ -1,13 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApp.Models
+namespace WebApp.Models.DTOS.AccountDTO
 {
-    public class RegisterNewAccountModel
+    public class CreateAccountDTO
     {
-        // [Key]
-        // public int AccountId { get; set; }
-
         public string FirstName { get; set; } = default!;
 
         public string LastName { get; set; } = default!;

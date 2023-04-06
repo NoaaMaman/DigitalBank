@@ -1,5 +1,6 @@
 ﻿
 using WebApp.Models;
+using WebApp.Models.DTOS.AccountDTO;
 using WebApp.Services.IServices;
 
 namespace WebApp.Services
@@ -10,7 +11,7 @@ namespace WebApp.Services
 
         Task<T> GetAsync<T>(int id);
 
-        Task<T> CreateAsync<T>(RegisterNewAccountModel dto);
+        Task<T> CreateAsync<T>(CreateAccountDTO dto);
 
         Task<T> UpdateAsync<T>(UpdateAccountModel dto);
 

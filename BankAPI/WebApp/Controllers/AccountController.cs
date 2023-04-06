@@ -45,15 +45,15 @@ namespace WebApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateAccount(RegisterNewAccountModel model)
+        public async Task<IActionResult> CreateAccount(CreateAccountDTO model)
         {
             if(ModelState.IsValid) 
             {
                 var response = await _accountService.CreateAsync<APIResponse>(model);
-                if (response != null && response.IsSuccess)
-                {
+                //if (response != null && response.IsSuccess)
+                //{
                     return RedirectToAction(nameof(IndexAccount));
-                }
+                //}
             }
             return View(model);
         }

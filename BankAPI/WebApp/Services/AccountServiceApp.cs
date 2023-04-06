@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System.Net.Http;
 using System.Threading.Tasks;
 using WebApp.Models;
+using WebApp.Models.DTOS.AccountDTO;
 using WebApp.Services;
 
 namespace WebApp.Services
@@ -19,7 +20,7 @@ namespace WebApp.Services
             accountUrl = configuration.GetValue<string>("ServiceUrls:BankAPI");
         }
 
-        async Task<T> IAccountServicesApp.CreateAsync<T>(RegisterNewAccountModel dto)
+        async Task<T> IAccountServicesApp.CreateAsync<T>(CreateAccountDTO dto)
         {
             return await sendAsync<T>(new APIRequest()
             {

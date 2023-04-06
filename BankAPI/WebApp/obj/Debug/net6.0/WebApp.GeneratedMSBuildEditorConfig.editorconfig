@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\WebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Admin/Desktop/DigitalBankproj/BankAPI/WebApp/Views/Account/CreateAcccount.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGVBY2Njb3VudC5jc2h0bWw=
+[C:/Users/Admin/Desktop/DigitalBankproj/BankAPI/WebApp/Views/Account/CreateAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDcmVhdGVBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Admin/Desktop/DigitalBankproj/BankAPI/WebApp/Views/Account/IndexAccount.cshtml]
