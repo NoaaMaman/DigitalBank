@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 namespace BankAPI.Controllers
 {
     [ApiController]
-    [Route("api/AccountAPI")]
+    [Route("/api/AccountAPI")]
     public class AccountController : ControllerBase
     {
         //Here We inject the Account service

@@ -32,7 +32,17 @@ namespace WebApp.Services
                 var client = httpClient.CreateClient();
                 HttpRequestMessage message = new HttpRequestMessage();
                 message.Headers.Add("Accept", "application/json");
-                message.RequestUri = new Uri(aPIRequest.Url);
+
+                // Debug statement to print the URL value
+                Console.WriteLine($"URL: {aPIRequest.Url}");
+
+                // Check that the URL contains a valid port number
+                if (!Uri.TryCreate(aPIRequest.Url, UriKind.Absolute, out Uri uri) || uri.Port < 0 || uri.Port > 65535)
+                {
+                    throw new UriFormatException("Invalid URI: Invalid port specified.");
+                }
+
+                message.RequestUri = uri;
                 if (aPIRequest.Data != null)
                 {
                     message.Content = new StringContent(JsonConvert.SerializeObject(aPIRequest.Data),
@@ -75,6 +85,8 @@ namespace WebApp.Services
                 return APIResponse;
             }
         }
+
+
 
 
     }
