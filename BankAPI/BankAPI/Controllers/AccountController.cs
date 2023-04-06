@@ -47,7 +47,7 @@ namespace BankAPI.Controllers
 
         }
         [HttpGet]
-        [Route("get_all_accounts")]
+        //[Route("get_all_accounts")]
         public async Task<ActionResult<APIResponse>> GetAllAccounts()
         {
             _logger.LogInformation("Getting all Accounts");

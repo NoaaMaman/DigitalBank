@@ -1,4 +1,5 @@
-﻿using BankAPI.Models.DTOS.AccountDTO;
+﻿
+using WebApp.Models;
 using WebApp.Services.IServices;
 
 namespace WebApp.Services

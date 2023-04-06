@@ -1,9 +1,10 @@
 ﻿using Bank_Utility;
-using BankAPI.Models.DTOS.AccountDTO;
+
 using Microsoft.Extensions.Configuration;
 using System.Net.Http;
 using System.Threading.Tasks;
 using WebApp.Models;
+using WebApp.Services;
 
 namespace WebApp.Services
 {
@@ -18,9 +19,9 @@ namespace WebApp.Services
             accountUrl = configuration.GetValue<string>("ServiceUrls:BankAPI");
         }
 
-        Task<T> IAccountServicesApp.CreateAsync<T>(BankAPI.Models.DTOS.AccountDTO.RegisterNewAccountModel dto)
+        async Task<T> IAccountServicesApp.CreateAsync<T>(RegisterNewAccountModel dto)
         {
-            return sendAsync<T>(new APIRequest()
+            return await sendAsync<T>(new APIRequest()
             {
                 ApiType = DS.ApiType.POST,
                 Data = dto,
@@ -55,7 +56,7 @@ namespace WebApp.Services
             });
         }
 
-        Task<T> IAccountServicesApp.UpdateAsync<T>(BankAPI.Models.DTOS.AccountDTO.UpdateAccountModel dto)
+        Task<T> IAccountServicesApp.UpdateAsync<T>(UpdateAccountModel dto)
         {
             return sendAsync<T>(new APIRequest()
             {
@@ -64,8 +65,6 @@ namespace WebApp.Services
                 Url = accountUrl + "api/AccountAPI" + dto.Id
             });;
         }
-
-        
 
         
     }

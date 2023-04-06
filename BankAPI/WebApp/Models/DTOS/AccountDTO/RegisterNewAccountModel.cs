@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using BankAPI;
 
 namespace WebApp.Models
 {
@@ -21,7 +20,7 @@ namespace WebApp.Models
 
         //public decimal CurrentAccountBalance { get; set; } = default!;
 
-        public AccountType AccountType { get; set; } = default!;
+        //public AccountType AccountType { get; set; } = default!;
 
         //public string AccountNumberGenerated { get; set; } = default!;
 

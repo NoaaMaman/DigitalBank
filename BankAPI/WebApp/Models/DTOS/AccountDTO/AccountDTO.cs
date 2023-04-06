@@ -1,4 +1,4 @@
-﻿using BankAPI;
+﻿
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApp.Models.DTOS.AccountDTO
@@ -20,7 +20,7 @@ namespace WebApp.Models.DTOS.AccountDTO
 
         public decimal CurrentAccountBalance { get; set; } = default!;
 
-        public AccountType AccountType { get; set; } = default!;
+        //public AccountType AccountType { get; set; } = default!;
 
         public string AccountNumberGenerated { get; set; } = default!;
 
