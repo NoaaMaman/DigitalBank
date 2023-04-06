@@ -4,8 +4,42 @@
     <div class="row pb-2">
         <div class="col">
             <h1 class="text-primary">Accounts List</h1>
-
         </div>
-
+        <div class="col text-end pt-1">
+            <a asp-controller="Account" asp-action="CreateAccount" class="btn btn-outline-primary"><i class="bi bi-plus-square"></i>   Create New Account</a>
+        </div>
     </div>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Account Number Generated
+                </th>
+                <th>
+                    Account Name
+                </th>
+                <th>
+                    Account Balance
+                </th>
+                <th>
+                    Latest Date
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.AccountNumberGenerated</td>
+                    <td>@item.AccountName</td>
+                    <td>@item.CurrentAccountBalance</td>
+                    <td>@item.DateLastUpdated</td>
+                    <td>
+                        <a asp-controller="Account" asp-action="UpdateAccount" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>  Update Account</a>
+                        <a asp-controller="Account" asp-action="DeleteAccount" class="btn btn-outline-primary"><i class="bi bi-trash-fill"></i> Delete Account</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
