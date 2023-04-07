@@ -30,3 +30,8 @@ C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\AutenAuthorAPI\obj\Debug\net6.0\r
 C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\AutenAuthorAPI\obj\Debug\net6.0\AutenAuthorAPI.pdb
 C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\AutenAuthorAPI\obj\Debug\net6.0\AutenAuthorAPI.genruntimeconfig.cache
 C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\AutenAuthorAPI\obj\Debug\net6.0\ref\AutenAuthorAPI.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\AutenAuthorAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\AutenAuthorAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\AutenAuthorAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\AutenAuthorAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\AutenAuthorAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
