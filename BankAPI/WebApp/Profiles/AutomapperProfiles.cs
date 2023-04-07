@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using BankAPI.Models.DTOS.AccountDTO;
 using BankAPI.Models.DTOS.TransactionDTO;
-using WebApp.Models.DTOS.AccountDTO;
+using WebApplication.Models.DTOS.AccountDTO;
 
-namespace WebApp.Profiles
+namespace WebApplication.Profiles
 {
     public class AutomapperProfiles : Profile
     {

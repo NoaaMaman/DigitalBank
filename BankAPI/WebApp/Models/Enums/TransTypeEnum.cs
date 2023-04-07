@@ -1,4 +1,4 @@
-﻿namespace WebApp.Models.Enums
+﻿namespace WebApplication.Models.Enums
 {
     public enum TransType
     {

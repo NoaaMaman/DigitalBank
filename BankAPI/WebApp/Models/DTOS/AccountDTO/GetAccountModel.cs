@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using BankAPI;
 
-namespace WebApp.Models
+namespace WebApplication.Models
 {
     public class GetAccountModel
     {

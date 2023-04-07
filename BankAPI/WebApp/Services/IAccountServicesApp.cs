@@ -1,9 +1,9 @@
 ﻿
-using WebApp.Models;
-using WebApp.Models.DTOS.AccountDTO;
-using WebApp.Services.IServices;
+using WebApplication.Models;
+using WebApplication.Models.DTOS.AccountDTO;
+using WebApplication.Services.IServices;
 
-namespace WebApp.Services
+namespace WebApplication.Services
 {
     public interface IAccountServicesApp
     {

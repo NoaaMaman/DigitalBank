@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BankAPI\BankAPI.csproj" />
     <ProjectReference Include="..\Bank_Utility\Bank_Utility.csproj" />
+    <ProjectReference Include="..\WebApplication\WebApplication.csproj" />
   </ItemGroup>
 
 </Project>

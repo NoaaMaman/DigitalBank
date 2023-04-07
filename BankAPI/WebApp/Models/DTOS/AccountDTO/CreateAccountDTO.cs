@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApp.Models.DTOS.AccountDTO
+namespace WebApplication.Models.DTOS.AccountDTO
 {
     public class CreateAccountDTO
     {

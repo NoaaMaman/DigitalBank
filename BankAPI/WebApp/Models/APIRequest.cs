@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using static Bank_Utility.DS;
 
-namespace WebApp.Models
+namespace WebApplication.Models
 {
     public class APIRequest
     {

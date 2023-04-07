@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace WebApp.Controllers
+namespace WebApplication.Controllers
 {
     public class TransactionController : Controller
     {

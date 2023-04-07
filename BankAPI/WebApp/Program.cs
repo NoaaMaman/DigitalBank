@@ -1,11 +1,11 @@
-using WebApp.Services;
-using WebApp.Models.DTOS.AccountDTO;
+using WebApplication.Services;
+using WebApplication.Models.DTOS.AccountDTO;
 
 using BankAPI.DAL;
-using WebApp.Profiles;
+using WebApplication.Profiles;
 using Umbraco.Core.Composing.CompositionExtensions;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

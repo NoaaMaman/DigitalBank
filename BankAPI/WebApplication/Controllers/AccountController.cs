@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using WebApp.Models;
+using WebApplication.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using WebApplication.Models.DTOS;
 
-using WebApp.Services;
+using WebApplication.Services;
 using WebApplication.Models.DTOS;
 using WebApplication.Models.DTOS.AccountDTO;
 using WebApplication.Services;

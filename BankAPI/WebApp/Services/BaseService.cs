@@ -6,12 +6,12 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using WebApp.Models;
-using WebApp.Services.IServices;
-using APIResponse = WebApp.Models.APIResponse;
+using WebApplication.Models;
+using WebApplication.Services.IServices;
+using APIResponse = WebApplication.Models.APIResponse;
 using Bank_Utility;
 
-namespace WebApp.Services
+namespace WebApplication.Services
 {
     public class BaseService : IBaseService
     {

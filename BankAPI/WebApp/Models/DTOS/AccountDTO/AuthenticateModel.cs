@@ -1,7 +1,7 @@
 ﻿using Microsoft.Identity.Client;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApp.Models
+namespace WebApplication.Models
 {
     public class AuthenticateModel
     {

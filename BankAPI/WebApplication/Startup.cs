@@ -32,6 +32,7 @@ namespace WebApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", options =>
             {
                 options.Cookie.Name = "MyCookieAuth";
@@ -55,7 +56,7 @@ namespace WebApplication
                 });
             });
 
-
+            services.AddControllers();
             services.AddRazorPages();
 
             services.AddHttpClient("AuthenAuthorAPI", client =>
@@ -75,6 +76,7 @@ namespace WebApplication
             services.AddHttpClient(); // Add this line to register IHttpClientFactory
             services.AddAutoMapper(typeof(AutomapperProfiles));
             services.AddControllersWithViews();
+            services.AddMvc();
         }
 
 

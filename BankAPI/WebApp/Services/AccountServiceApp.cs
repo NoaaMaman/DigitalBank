@@ -3,11 +3,11 @@
 using Microsoft.Extensions.Configuration;
 using System.Net.Http;
 using System.Threading.Tasks;
-using WebApp.Models;
-using WebApp.Models.DTOS.AccountDTO;
-using WebApp.Services;
+using WebApplication.Models;
+using WebApplication.Models.DTOS.AccountDTO;
+using WebApplication.Services;
 
-namespace WebApp.Services
+namespace WebApplication.Services
 {
     public class AccountServiceApp : BaseService, IAccountServicesApp
     {

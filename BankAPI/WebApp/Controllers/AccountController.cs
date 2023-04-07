@@ -1,17 +1,14 @@
 ﻿using AutoMapper;
-using WebApp.Models;
+
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using WebApplication.Models;
+using WebApplication.Models.DTOS.AccountDTO;
+using WebApplication.Services;
 
-using WebApp.Models.DTOS;
-
-using WebApp.Services;
-using WebApp.Models.DTOS;
-using WebApp.Models.DTOS.AccountDTO;
-
-namespace WebApp.Controllers
+namespace WebApplication.Controllers
 {
     public class AccountController : Controller
     {

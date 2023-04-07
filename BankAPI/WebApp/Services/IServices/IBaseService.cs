@@ -1,8 +1,8 @@
 ﻿using BankAPI.Models;
-using WebApp.Models;
-using APIResponse = WebApp.Models.APIResponse;
+using WebApplication.Models;
+using APIResponse = WebApplication.Models.APIResponse;
 
-namespace WebApp.Services.IServices
+namespace WebApplication.Services.IServices
 {
     public interface IBaseService
     {
