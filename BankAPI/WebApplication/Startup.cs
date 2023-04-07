@@ -49,6 +49,11 @@ namespace WebApplication
 
 
             services.AddRazorPages();
+
+            services.AddHttpClient("AuthenAuthorAPI", client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7168");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

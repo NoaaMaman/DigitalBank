@@ -8,6 +8,9 @@ namespace WebApplication.Pages
    
     public class HumanResourceModel : PageModel
     {
+        
+
+
         public void OnGet()
         {
         }
