@@ -8,6 +8,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication.Profiles;
+using WebApplication.Services;
+
+
+//builder.Services.AddControllersWithViews();
+//builder.Services.AddScoped<IAccountServicesApp, AccountServiceApp>();
+//builder.Services.AddHttpClient(); // Add this line to register IHttpClientFactory
+//builder.Services.AddAutoMapper(typeof(AutomapperProfiles));
 
 namespace WebApplication
 {
@@ -63,6 +71,10 @@ namespace WebApplication
             });
 
             services.AddHttpContextAccessor();
+            services.AddScoped<IAccountServicesApp, AccountServiceApp>();
+            services.AddHttpClient(); // Add this line to register IHttpClientFactory
+            services.AddAutoMapper(typeof(AutomapperProfiles));
+            services.AddControllersWithViews();
         }
 
 

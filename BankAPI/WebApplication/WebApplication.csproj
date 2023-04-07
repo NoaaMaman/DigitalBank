@@ -11,4 +11,9 @@
     <PackageReference Include="NPOI" Version="2.6.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BankAPI\BankAPI.csproj" />
+    <ProjectReference Include="..\Bank_Utility\Bank_Utility.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "TN/cXvvbWveZnNgLzEowIdRd4qjbGX4tlFIX1qsqC+c=",
+  "Hash": "c42FIhSQe0e6i5mKUTLMpU2KiGhwyU2irUTP/TWyGpc=",
   "Source": "WebApplication",
   "BasePath": "_content/WebApplication",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\BankAPI\\BankAPI.csproj",
+      "Version": 2,
+      "Source": "BankAPI",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "WebApplication\\wwwroot",
