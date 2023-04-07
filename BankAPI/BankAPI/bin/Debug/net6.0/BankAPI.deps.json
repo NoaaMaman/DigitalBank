@@ -15,6 +15,7 @@
           "Microsoft.EntityFrameworkCore": "8.0.0-preview.2.23128.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0-preview.2.23128.3",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0-preview.2.23128.3",
+          "Microsoft.OpenApi": "1.6.4-preview1",
           "Newtonsoft.Json": "13.0.3",
           "Serilog.AspNetCore": "6.1.1-dev-00295",
           "Serilog.Sinks.File": "5.0.1-dev-00947",
@@ -555,11 +556,11 @@
       },
       "Microsoft.NETCore.Platforms/2.0.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.OpenApi/1.2.3": {
+      "Microsoft.OpenApi/1.6.4-preview1": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "assemblyVersion": "1.2.3.0",
-            "fileVersion": "1.2.3.0"
+            "assemblyVersion": "1.6.4.0",
+            "fileVersion": "1.6.4.0"
           }
         }
       },
@@ -1074,7 +1075,7 @@
       },
       "Swashbuckle.AspNetCore.Swagger/6.5.0": {
         "dependencies": {
-          "Microsoft.OpenApi": "1.2.3"
+          "Microsoft.OpenApi": "1.6.4-preview1"
         },
         "runtime": {
           "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
@@ -2485,12 +2486,12 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "Microsoft.OpenApi/1.2.3": {
+    "Microsoft.OpenApi/1.6.4-preview1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
-      "path": "microsoft.openapi/1.2.3",
-      "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
+      "sha512": "sha512-nPm3RBFU5E0TL2jkfD7f0T6g6taKEeGsUoUzUhpQEW2CNLM7iGCmplDIhoVUPr1QNXJpw3YSkfuJ53PiGn0WoA==",
+      "path": "microsoft.openapi/1.6.4-preview1",
+      "hashPath": "microsoft.openapi.1.6.4-preview1.nupkg.sha512"
     },
     "Microsoft.Owin/4.0.1": {
       "type": "package",

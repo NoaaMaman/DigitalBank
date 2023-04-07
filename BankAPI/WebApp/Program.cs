@@ -3,6 +3,7 @@ using WebApp.Models.DTOS.AccountDTO;
 
 using BankAPI.DAL;
 using WebApp.Profiles;
+using Umbraco.Core.Composing.CompositionExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IAccountServicesApp, AccountServiceApp>();
 builder.Services.AddHttpClient(); // Add this line to register IHttpClientFactory
 builder.Services.AddAutoMapper(typeof(AutomapperProfiles));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
