@@ -43,7 +43,7 @@ namespace WebApplication
                 options.AddPolicy("ConsultantManagerOnly", policy =>
                 {
                     policy.RequireClaim("Manager")
-                    .RequireClaim("Department", "ConsultingBankers");       
+                    .RequireClaim("Department", "ConsultingBankers");
                 });
             });
 
@@ -54,7 +54,17 @@ namespace WebApplication
             {
                 client.BaseAddress = new Uri("https://localhost:7168");
             });
+
+            services.AddSession(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.IdleTimeout = TimeSpan.FromHours(2);
+                options.Cookie.IsEssential = true;
+            });
+
+            services.AddHttpContextAccessor();
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -78,6 +88,8 @@ namespace WebApplication
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

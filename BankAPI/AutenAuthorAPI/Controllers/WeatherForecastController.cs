@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AutenAuthorAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]//The user is not anonymous
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

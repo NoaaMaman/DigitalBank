@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Pr+fwWr55s2RSKJcO0hh2h9DnFSVpFoqSBWpDXyr28IxTc4c4Otn7TBIAxDRHhFccCeuwzPEzNJTQCd/UnA6uQ==",
+  "dgSpecHash": "0OlJ5dHSeu423xjX8uJhvdpSqjTNvcyHmVR9aCsGRQ+A2BjMQ4crwY9Q6MMh6ArB3LOTmyO1wvOcTNUTA7pZ7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\AutenAuthorAPI\\AutenAuthorAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
@@ -14,6 +15,8 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.24.0\\microsoft.identitymodel.abstractions.6.24.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.24.0\\microsoft.identitymodel.jsonwebtokens.6.24.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.identitymodel.logging\\6.24.0\\microsoft.identitymodel.logging.6.24.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.24.0\\microsoft.identitymodel.tokens.6.24.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
