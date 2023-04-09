@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace InitialAlogarithmForBankingSystem
+namespace Alogarithm
 {
     public class Program
     {
@@ -18,12 +15,12 @@ namespace InitialAlogarithmForBankingSystem
         {
             if (!offers.ContainsKey(node))
             {
-                throw new ArgumentException($"The specified node '{node}' was not found in the offers dictionary.");
+                return 0;
             }
             double score = 0.0;
             // Determine the offer associated with the current node
             Dictionary<string, dynamic> offer = offers[node];
-            if(offer == null )
+            if (offer == null)
             {
                 return score;
             }
@@ -48,7 +45,7 @@ namespace InitialAlogarithmForBankingSystem
                 return double.MinValue;
             }
 
-                if (offer.ContainsKey("creditScore") && customer["creditScore"] < offer["creditScore"])
+            if (offer.ContainsKey("creditScore") && customer["creditScore"] < offer["creditScore"])
             {
                 return double.MinValue;
             }
@@ -86,19 +83,23 @@ namespace InitialAlogarithmForBankingSystem
 
 
         }
-            /*Takes as input a grpah representing the possible paths through the different 
-             account types anb the associated weights(The cost to move from, one account to another),
-            A dictionary of offers containign offers for each account type,
-            A dictionary customers containing information about the customer ,
-            list of transactions containing the customer trasnsactions
-            The fucntion return the string value representing the account type that provides the 
-            best offer to the customer eligbility for each offer and the profitability for each offer*/
+        /*Takes as input a grpah representing the possible paths through the different 
+         account types anb the associated weights(The cost to move from, one account to another),
+        A dictionary of offers containign offers for each account type,
+        A dictionary customers containing information about the customer ,
+        list of transactions containing the customer trasnsactions
+        The fucntion return the string value representing the account type that provides the 
+        best offer to the customer eligbility for each offer and the profitability for each offer*/
         public static string FindBestOffer(Dictionary<string, Dictionary<string, int>> graph, Dictionary<string, Dictionary<string, dynamic>> offers, Dictionary<string, dynamic> customer, List<Dictionary<string, dynamic>> transactions)
         {
             Dictionary<string, int> neighbors;
             string currentNode = "start";
             while (true)
             {
+                if (currentNode == "end")
+                {
+                    break;
+                }
                 neighbors = graph[currentNode];
                 string bestNeighbor = "";
                 double bestScore = double.MinValue;
@@ -129,7 +130,7 @@ namespace InitialAlogarithmForBankingSystem
 
             return currentNode;
         }
-
+        //Types of accoutns : start, youth, savings, high-yield,retirement
         static void Main(string[] args)
         {
             // Initialize the graph
@@ -137,14 +138,18 @@ namespace InitialAlogarithmForBankingSystem
             graph.Add("start", new Dictionary<string, int>());
             graph["start"].Add("youth", 1);
             graph["start"].Add("savings", 2);
+
             graph.Add("youth", new Dictionary<string, int>());
             graph["youth"].Add("high-yield", 3);
             graph["youth"].Add("retirement", 10);
+
             graph.Add("savings", new Dictionary<string, int>());
             graph["savings"].Add("high-yield", 1);
             graph["savings"].Add("retirement", 5);
+
             graph.Add("high-yield", new Dictionary<string, int>());
             graph["high-yield"].Add("end", 1);
+
             graph.Add("retirement", new Dictionary<string, int>());
             graph["retirement"].Add("end", 5);
 
@@ -182,11 +187,4 @@ namespace InitialAlogarithmForBankingSystem
             Console.WriteLine("The best offer for the customer is: " + bestOffer);
         }
     }
-   
-
-
-
-
-} 
-        
-
+}
