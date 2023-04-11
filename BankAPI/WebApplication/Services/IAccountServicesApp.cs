@@ -1,6 +1,7 @@
 ﻿
 using WebApplication.Models;
-using WebApplication.Models.DTOS.AccountDTO;
+using WebApplication.Models.DTOS;
+
 
 
 namespace WebApplication.Services
@@ -13,10 +14,10 @@ namespace WebApplication.Services
 
         Task<T> CreateAsync<T>(CreateAccountDTO dto);
 
-        Task<T> UpdateAsync<T>(UpdateAccountModel dto);
+        Task<T> UpdateAsync<T>(UpdateAccountDTO dto);
 
         Task<T> DeleteAsync<T>(int id);
-
+        
     }
     
     

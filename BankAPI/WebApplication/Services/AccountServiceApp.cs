@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System.Net.Http;
 using System.Threading.Tasks;
 using WebApplication.Models;
-using WebApplication.Models.DTOS.AccountDTO;
+using WebApplication.Models.DTOS;
 using WebApplication.Services;
 
 namespace WebApplication.Services
@@ -57,16 +57,16 @@ namespace WebApplication.Services
             });
         }
 
-        Task<T> IAccountServicesApp.UpdateAsync<T>(UpdateAccountModel dto)
+        
+
+        Task<T> IAccountServicesApp.UpdateAsync<T>(UpdateAccountDTO dto)
         {
             return sendAsync<T>(new APIRequest()
             {
                 ApiType = DS.ApiType.PUT,
                 Data = dto,
                 Url = accountUrl + "api/AccountAPI" + dto.Id
-            });;
+            }); ;
         }
-
-        
     }
 }

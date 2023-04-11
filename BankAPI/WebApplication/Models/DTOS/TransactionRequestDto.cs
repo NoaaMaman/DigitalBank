@@ -1,6 +1,6 @@
 ﻿using BankAPI;
 
-namespace WebApplication.Models.DTOS.TransactipnDTO
+namespace WebApplication.Models.DTOS
 {
     public class TransactionRequestDto
     {

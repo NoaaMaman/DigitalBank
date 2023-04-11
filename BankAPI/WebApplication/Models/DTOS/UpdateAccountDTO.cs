@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication.Models
+namespace WebApplication.Models.DTOS
 {
-    public class UpdateAccountModel
+    public class UpdateAccountDTO
     {
         [Key]
         public int Id { get; set; }

@@ -1,13 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿
 using System.ComponentModel.DataAnnotations;
-using BankAPI;
 
-namespace WebApplication.Models
+namespace WebApplication.Models.DTOS
 {
-    public class GetAccountModel
+    public class AccountDTO
     {
 
-        [Key]
         public int AccountId { get; set; }
 
         public string FirstName { get; set; } = default!;
@@ -22,10 +20,9 @@ namespace WebApplication.Models
 
         public decimal CurrentAccountBalance { get; set; } = default!;
 
-        public AccountType AccountType { get; set; } = default!;
+        //public AccountType AccountType { get; set; } = default!;
 
         public string AccountNumberGenerated { get; set; } = default!;
-
 
 
         public DateTime DateCreated { get; set; } = default!;

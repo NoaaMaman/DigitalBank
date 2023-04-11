@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 using WebApplication.Models.DTOS;
 
 using WebApplication.Services;
-using WebApplication.Models.DTOS;
-using WebApplication.Models.DTOS.AccountDTO;
 using WebApplication.Services;
 using WebApplication.Models;
 
@@ -67,14 +65,14 @@ namespace WebApplication.Controllers
             //if(response!= null && response.IsSuccess)
             //{
             AccountDTO model = JsonConvert.DeserializeObject<AccountDTO>(Convert.ToString(response.Result));
-            return View(_mapper.Map<UpdateAccountModel>(model));
+            return View(_mapper.Map<UpdateAccountDTO>(model));
             //}
             //return NotFound();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateAccount(UpdateAccountModel model)
+        public async Task<IActionResult> UpdateAccount(UpdateAccountDTO model)
         {
             if (ModelState.IsValid)
             {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication.Models
+namespace WebApplication.Models.DTOS
 {
     public class AuthenticateModel
     {
