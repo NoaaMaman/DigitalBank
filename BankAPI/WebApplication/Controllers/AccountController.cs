@@ -84,5 +84,30 @@ namespace WebApplication.Controllers
             }
             return View(model);
         }
+
+        public async Task<IActionResult> DeleteAccount(int accountID)
+        {
+            var response = await _accountService.GetAsync<APIResponse>(accountID);
+            //if(response != null && response.IsSuccess)
+            //{
+                AccountDTO model = JsonConvert.DeserializeObject<AccountDTO>(Convert.ToString(response.Result));
+                return View(model);
+            //}
+            //return NotFound();
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteAccount(AccountDTO model)
+        {
+            var response = await _accountService.DeleteAsync<APIResponse>(model.AccountId);
+
+            //if(response != null && response.IsSuccess)
+            //{
+                return RedirectToAction(nameof(IndexAccount));
+            //}
+            //return View(model);
+        }
     }
 }
