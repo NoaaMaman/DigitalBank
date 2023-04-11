@@ -1,16 +1,10 @@
 ﻿using BankAPI.DAL;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Security.Principal;
-using System.Threading.Tasks;
-using Umbraco.Core.Models.Entities;
 
 namespace BankAPI.Services.Implementations
 {
-    public class GenericRepository<T> where T : class, IEntity
+    public class GenericRepository<T> where T : class
     {
         private readonly youBankingDbContext _applicationDbContext;
         private readonly DbSet<T> _dbSet;
@@ -21,12 +15,12 @@ namespace BankAPI.Services.Implementations
             _dbSet = applicationDbContext.Set<T>();
         }
 
-        public async Task<int> InsertAsync(T entity)
-        {
-            await _dbSet.AddAsync(entity);
-            await _applicationDbContext.SaveChangesAsync();
-            return entity.Id;
-        }
+        //public async Task<int> InsertAsync(T entity)
+        //{
+        //    await _dbSet.AddAsync(entity);
+        //    await _applicationDbContext.SaveChangesAsync();
+        //    return entity.Id;
+        //}
 
         public void Update(T entity)
         {
@@ -66,19 +60,19 @@ namespace BankAPI.Services.Implementations
             return await query.ToListAsync();
         }
 
-        public async Task<T?> GetByIdAsync(int id, params Expression<Func<T, object>>[] includes)
-        {
-            IQueryable<T> query = _dbSet;
+        //public async Task<T?> GetByIdAsync(int id, params Expression<Func<T, object>>[] includes)
+        //{
+        //    IQueryable<T> query = _dbSet;
 
-            query = query.Where(entity => entity.Id == id);
+        //    query = query.Where(entity => entity.Id == id);
 
-            foreach (var include in includes)
-            {
-                query = query.Include(include);
-            }
+        //    foreach (var include in includes)
+        //    {
+        //        query = query.Include(include);
+        //    }
 
-            return await query.SingleOrDefaultAsync();
-        }
+        //    return await query.SingleOrDefaultAsync();
+        //}
 
         public async Task<List<T>> GetFilteredAsync(Expression<Func<T, bool>>[] filters, int? skip, int? take, params Expression<Func<T, object>>[] includes)
         {

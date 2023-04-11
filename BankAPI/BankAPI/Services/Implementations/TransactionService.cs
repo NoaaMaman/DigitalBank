@@ -69,8 +69,13 @@ namespace BankAPI.Services.Implementations
                 destinationAccount = await _accountService.GetByNumberAsync(AccountNumber);
 
                 //Now let's update their account balances
-                sourceAccount.CurrentAccountBalance -= Amount;
-                destinationAccount.CurrentAccountBalance += Amount;
+                if(sourceAccount.CurrentAccountBalance >= Amount)
+                {
+                    sourceAccount.CurrentAccountBalance -= Amount;
+                    destinationAccount.CurrentAccountBalance += Amount;
+
+                }
+                
 
 
                 if ((_dbContext.Entry(sourceAccount).State == Microsoft.EntityFrameworkCore.EntityState.Modified) &&
