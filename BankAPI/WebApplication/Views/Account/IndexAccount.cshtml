@@ -39,8 +39,8 @@
                     <td>@item.DateLastUpdated</td>
                     <td>@item.Email</td>
                     <td>
-                        <a asp-controller="Account" asp-action="UpdateAccount" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>  Update Account</a>
-                        <a asp-controller="Account" asp-action="DeleteAccount" class="btn btn-outline-primary"><i class="bi bi-trash-fill"></i> Delete Account</a>
+                        <a asp-controller="Account" asp-route-accountID="@item.AccountId" asp-action="UpdateAccount" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i>  Update Account</a>
+                        <a asp-controller="Account" asp-route-accountID="@item.AccountId" asp-action="DeleteAccount" class="btn btn-outline-primary"><i class="bi bi-trash-fill"></i> Delete Account</a>
                     </td>
                 </tr>
             }

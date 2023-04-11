@@ -59,5 +59,32 @@ namespace WebApplication.Controllers
             }
             return View(model);
         }
+
+        public async Task<IActionResult> UpdateAccount(int accountID)
+        {
+
+            var response = await _accountService.GetAsync<APIResponse>(accountID);
+            //if(response!= null && response.IsSuccess)
+            //{
+            AccountDTO model = JsonConvert.DeserializeObject<AccountDTO>(Convert.ToString(response.Result));
+            return View(_mapper.Map<UpdateAccountModel>(model));
+            //}
+            //return NotFound();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateAccount(UpdateAccountModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = await _accountService.UpdateAsync<APIResponse>(model);
+                //if(response!= null && response.IsSuccess)
+                //{
+                return RedirectToAction(nameof(IndexAccount));
+                //}
+            }
+            return View(model);
+        }
     }
 }
