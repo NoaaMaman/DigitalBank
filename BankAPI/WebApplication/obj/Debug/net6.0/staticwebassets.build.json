@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c42FIhSQe0e6i5mKUTLMpU2KiGhwyU2irUTP/TWyGpc=",
+  "Hash": "hnKbQiMNCbhbu0dhTP7HaeZo+sX2TyCB3cPqwUc3YZY=",
   "Source": "WebApplication",
   "BasePath": "_content/WebApplication",
   "Mode": "Default",
@@ -1098,6 +1098,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\picture1.png",
+      "SourceId": "WebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\",
+      "BasePath": "_content/WebApplication",
+      "RelativePath": "PicturesProjLandingPage/picture1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PicturesProjLandingPage\\picture1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\picture2.png",
+      "SourceId": "WebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\",
+      "BasePath": "_content/WebApplication",
+      "RelativePath": "PicturesProjLandingPage/picture2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PicturesProjLandingPage\\picture2.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\picture3.png",
+      "SourceId": "WebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\",
+      "BasePath": "_content/WebApplication",
+      "RelativePath": "PicturesProjLandingPage/picture3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PicturesProjLandingPage\\picture3.png"
     }
   ]
 }

@@ -3,8 +3,39 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
 <div class="text-center">
     <h1 class="display-4">Welcome Anonymous User To Our App</h1>
-    
+
+</div>
+<div class="text-center">
+    <h1 class="display-4">Welcome Anonymous User To Our App</h1>
+
+</div>
+@*<div class="row" style="--bs-gutter-x:0">
+    @foreach(var picture in Model)
+    {
+        <div class="p-4 col-md-12 col-lg-6">
+            <div class="row" style="border-radius:20px; border: 1px solid #ffffff">
+                <img class="d-block w-100" src="@picture.ImageUrl" alt="" />
+            </div>
+        </div>
+    }
+</div>*@
+<div class="row" style="--bs-gutter-x:0">
+
+    <div class="p-4 col-md-12 col-lg-6">
+        <div class="row" style="border-radius:20px; border: 1px solid #ffffff">
+            <img class="d-block w-100" src="~/PicturesProjLandingPage/picture1.png" alt="" />
+        </div>
+    </div>
+    <div class="p-4 col-md-12 col-lg-6">
+        <div class="row" style="border-radius:20px; border: 1px solid #ffffff">
+            <img class="d-block w-100" src="~/PicturesProjLandingPage/picture2.png" alt="" />
+        </div>
+    </div>
+    <div class="p-4 col-md-12 col-lg-6">
+        <div class="row" style="border-radius:20px; border: 1px solid #ffffff">
+            <img class="d-block w-100" src="~/PicturesProjLandingPage/picture3.png" alt="" />
+        </div>
+    </div>
 </div>

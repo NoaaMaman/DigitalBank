@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\WebApplication.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\picture1.png",
+      "PackagePath": "staticwebassets\\PicturesProjLandingPage\\picture1.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\picture2.png",
+      "PackagePath": "staticwebassets\\PicturesProjLandingPage\\picture2.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\picture3.png",
+      "PackagePath": "staticwebassets\\PicturesProjLandingPage\\picture3.png"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
