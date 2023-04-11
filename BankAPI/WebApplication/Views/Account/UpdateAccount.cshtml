@@ -1,11 +1,11 @@
 ﻿@model WebApplication.Models.DTOS.UpdateAccountDTO
 
-<form asp-action="CreateAccount">
+<form asp-action="UpdateAccount">
     <br />
     <div class="container border p-3">
         <h1 class="text-primary">Create Account</h1>
         <hr />
-
+        <input hidden asp-for="Id"/>
         <div class="row">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="col-2">
@@ -43,9 +43,8 @@
                 <a asp-action="IndexAccount" asp-controller="Account" class="btn-primary btn from-control">Back to Accounts List...</a>
             </div>
             <div class="col-5">
-                <input type="submit" value="Create" class="btn btn-success form-control" />
+                <input type="submit" value="Update" class="btn btn-success form-control" />
             </div>
-
         </div>
     </div>
 </form>
