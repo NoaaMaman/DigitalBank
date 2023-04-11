@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hnKbQiMNCbhbu0dhTP7HaeZo+sX2TyCB3cPqwUc3YZY=",
+  "Hash": "OH3s9MblWQqKvbZE/NVSfVy7qvSm+1pRDgUOLRe3YYI=",
   "Source": "WebApplication",
   "BasePath": "_content/WebApplication",
   "Mode": "Default",
@@ -1098,6 +1098,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\logo.png",
+      "SourceId": "WebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\",
+      "BasePath": "_content/WebApplication",
+      "RelativePath": "PicturesProjLandingPage/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\PicturesProjLandingPage\\logo.png"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\picture1.png",

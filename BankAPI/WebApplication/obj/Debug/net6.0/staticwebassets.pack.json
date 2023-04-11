@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\WebApplication.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\logo.png",
+      "PackagePath": "staticwebassets\\PicturesProjLandingPage\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\PicturesProjLandingPage\\picture1.png",
       "PackagePath": "staticwebassets\\PicturesProjLandingPage\\picture1.png"
     },
