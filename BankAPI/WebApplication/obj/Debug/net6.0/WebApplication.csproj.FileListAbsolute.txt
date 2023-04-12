@@ -122,3 +122,4 @@ C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\WebApplication\bin\Debug\net6.0\B
 C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\WebApplication\bin\Debug\net6.0\Bank_Utility.pdb
 C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\WebApplication\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\WebApplication\obj\Debug\net6.0\WebApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Admin\Desktop\DigitalBankproj\BankAPI\WebApplication\bin\Debug\net6.0\OpenAI.Net.dll

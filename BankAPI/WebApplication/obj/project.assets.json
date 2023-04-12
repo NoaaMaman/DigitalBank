@@ -517,6 +517,25 @@
           }
         }
       },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/8.0.0-preview.2.23128.3": {
         "type": "package",
         "dependencies": {
@@ -874,6 +893,23 @@
           },
           "lib/net6.0/NPOI.dll": {
             "related": ".OOXML.deps.json;.OOXML.pdb;.OOXML.xml;.OpenXml4Net.pdb;.OpenXmlFormats.dll.config;.OpenXmlFormats.pdb;.pdb;.xml"
+          }
+        }
+      },
+      "OpenAI.Net.Client/1.0.20": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Http": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/OpenAI.Net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/OpenAI.Net.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -2536,6 +2572,25 @@
         "microsoft.extensions.hosting.abstractions.nuspec"
       ]
     },
+    "Microsoft.Extensions.Http/6.0.0": {
+      "sha512": "15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "type": "package",
+      "path": "microsoft.extensions.http/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Http.dll",
+        "lib/net461/Microsoft.Extensions.Http.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
+        "microsoft.extensions.http.6.0.0.nupkg.sha512",
+        "microsoft.extensions.http.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.Extensions.Logging/8.0.0-preview.2.23128.3": {
       "sha512": "u+6+0XKdO1VlnNYKzaIklyfgCSsBs21yZfEVKFpgJ0Ppx4BULIyJPqaEzCMaK0ajDw/k7xe8vafMUjmjX6h2UA==",
       "type": "package",
@@ -3104,6 +3159,22 @@
         "logo/60_60.jpg",
         "npoi.2.6.0.nupkg.sha512",
         "npoi.nuspec"
+      ]
+    },
+    "OpenAI.Net.Client/1.0.20": {
+      "sha512": "wX4tb+53Lu9yUhdgTP9nBEy2pzMeZbKfLBh/tXghU/vs6Z+v0q7y9JVbWCpo76JKL0zmkDs5BM4fdJdGiUmxqw==",
+      "type": "package",
+      "path": "openai.net.client/1.0.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "lib/net6.0/OpenAI.Net.dll",
+        "lib/net6.0/OpenAI.Net.xml",
+        "logo.png",
+        "openai.net.client.1.0.20.nupkg.sha512",
+        "openai.net.client.nuspec"
       ]
     },
     "Portable.BouncyCastle/1.9.0": {
@@ -4348,7 +4419,8 @@
       "BankAPI >= 1.0.0",
       "Bank_Utility >= 1.0.0",
       "NPOI >= 2.6.0",
-      "Newtonsoft.Json >= 13.0.3"
+      "Newtonsoft.Json >= 13.0.3",
+      "OpenAI.Net.Client >= 1.0.20"
     ]
   },
   "packageFolders": {
@@ -4410,6 +4482,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "OpenAI.Net.Client": {
+            "target": "Package",
+            "version": "[1.0.20, )"
           }
         },
         "imports": [

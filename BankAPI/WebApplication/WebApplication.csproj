@@ -4,11 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>d8c73b9c-2ee6-4126-b656-4baeb047b55d</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="NPOI" Version="2.6.0" />
+    <PackageReference Include="OpenAI.Net.Client" Version="1.0.20" />
   </ItemGroup>
 
   <ItemGroup>

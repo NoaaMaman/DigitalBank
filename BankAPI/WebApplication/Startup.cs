@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication.Profiles;
 using WebApplication.Services;
+using OpenAI.Net;
 
 
 //builder.Services.AddControllersWithViews();
@@ -58,6 +59,12 @@ namespace WebApplication
 
             services.AddControllers();
             services.AddRazorPages();
+
+            //Add OpenAI service
+            services.AddOpenAIServices(e =>
+            {
+                e.ApiKey = Configuration["OpenAI:ApiKey"];
+            });
 
             services.AddHttpClient("AuthenAuthorAPI", client =>
             {

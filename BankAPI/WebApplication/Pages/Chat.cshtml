@@ -1,0 +1,31 @@
+﻿@page "/chat"
+@model WebApplication.Pages.ChatModel
+@{
+}
+<PageTitle>Banking Chat</PageTitle>
+@using OpenAI.Net;
+@inject IOpenAIService openAiService;
+
+
+<head>
+    <link rel="stylesheet" href="~/css/stylesChat.css" />
+</head>
+
+<body>
+    <div class="logo-container">
+       
+    </div>
+    <div class="chat-box">
+        <div class="chat-box-header">Coding Nexus</div>
+        <div class="chat-box-body">
+            <div class="response">
+                <p>Welcome to the Coding Nexus AI, how can I help you today?</p>
+            </div>
+        </div>
+        <div class="chat-box-footer">
+            <input type="text" placeholder="Ask a question..." />
+            <button>Send</button>
+        </div>
+    </div>
+    <script src="~/js/mainChat.js"></script>
+</body>

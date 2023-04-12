@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutenAuthorAPI", "AutenAuthorAPI\AutenAuthorAPI.csproj", "{479FCD00-11F0-458E-A0C5-457283A8E042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OffersSystemAPI", "OffersSystemAPI\OffersSystemAPI.csproj", "{EB0340E7-34F5-4623-9213-8A00A300F284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OffersSystemAPI", "OffersSystemAPI\OffersSystemAPI.csproj", "{EB0340E7-34F5-4623-9213-8A00A300F284}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
