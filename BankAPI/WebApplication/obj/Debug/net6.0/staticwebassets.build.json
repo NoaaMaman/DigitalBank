@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OH3s9MblWQqKvbZE/NVSfVy7qvSm+1pRDgUOLRe3YYI=",
+  "Hash": "gkoEi9ffUJ/PAGzBrg6Z2g+3SKgaeLg/EMb4PM8n3C4=",
   "Source": "WebApplication",
   "BasePath": "_content/WebApplication",
   "Mode": "Default",
@@ -97,6 +97,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\css\\stylesChat.css.css",
+      "SourceId": "WebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\",
+      "BasePath": "_content/WebApplication",
+      "RelativePath": "css/stylesChat.css.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\stylesChat.css.css"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\favicon.ico",
       "SourceId": "WebApplication",
       "SourceType": "Discovered",
@@ -112,6 +129,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\js\\mainChat.js.js",
+      "SourceId": "WebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\",
+      "BasePath": "_content/WebApplication",
+      "RelativePath": "js/mainChat.js.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\mainChat.js.js"
     },
     {
       "Identity": "C:\\Users\\Admin\\Desktop\\DigitalBankproj\\BankAPI\\WebApplication\\wwwroot\\js\\site.js",
